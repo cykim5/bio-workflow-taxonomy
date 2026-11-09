@@ -181,17 +181,41 @@ def make_mermaid(root):
     return "\n".join(lines)
 
 
+def mermaid_key(node_id):
+    return "N" + node_id.replace(".", "_")
+
+
+def mermaid_label(text):
+    """Mermaid labels are quoted, so only double quotes need replacing."""
+    return text.replace('"', "'")
+
+
 def make_branch_outline(root):
-    """Domains with their second-level branches, for the README."""
+    """One diagram per domain, covering every subsection, for the README."""
     blocks = []
     for top in root["children"]:
         header = f'### {top["id"]}. {top["title"]}'
         if top.get("output"):
             header += f'\n\n*Output: {top["output"]}.*'
-        rows = ["", "| Branch | Workflows |", "|---|---|"]
-        for child in top["children"]:
-            rows.append(f'| {child["id"]} {child["title"]} | {count_leaves(child)} |')
-        blocks.append(header + "\n" + "\n".join(rows))
+        header += (f'\n\n{count_leaves(top)} workflows in '
+                   f'{len(top["children"])} branches.')
+
+        root_key = mermaid_key(top["id"])
+        lines = ["flowchart LR",
+                 f'    {root_key}("{top["id"]}. {mermaid_label(top["title"])}")']
+
+        def walk(node, parent_key):
+            for child in node["children"]:
+                key = mermaid_key(child["id"])
+                label = mermaid_label(f'{child["id"]} {child["title"]}')
+                lines.append(f'    {parent_key} --> {key}["{label}"]')
+                walk(child, key)
+
+        walk(top, root_key)
+        lines.append(f'    class {root_key} domain;')
+        lines.append("    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;")
+        diagram = "```mermaid\n" + "\n".join(lines) + "\n```"
+        blocks.append(header + "\n\n" + diagram)
     return "\n\n".join(blocks)
 
 

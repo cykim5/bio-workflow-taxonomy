@@ -38,15 +38,23 @@
         </label>
       </div>
       <div class="buttons">
-        <button type="button" id="expand" class="btn">Expand all</button>
-        <button type="button" id="collapse" class="btn">Collapse all</button>
+        <div class="toggle" role="group" aria-label="View">
+          <button type="button" id="viewMap" class="btn seg is-on" aria-pressed="true">Map</button>
+          <button type="button" id="viewList" class="btn seg" aria-pressed="false">List</button>
+        </div>
+        <button type="button" id="expand" class="btn" hidden>Expand all</button>
+        <button type="button" id="collapse" class="btn" hidden>Collapse all</button>
       </div>
     </div>
   </div>
 
   <main class="wrap">
     <p class="result-line" id="resultLine" role="status"></p>
-    <div id="tree" class="tree"></div>
+    <div id="map" class="map">
+      <p class="map-hint" id="mapHint">Click a box to open what is inside it.</p>
+      <div class="columns" id="columns"></div>
+    </div>
+    <div id="tree" class="tree" hidden></div>
     <p class="empty" id="empty" hidden>Nothing matches those filters. Try a broader search.</p>
   </main>
 

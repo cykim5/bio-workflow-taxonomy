@@ -108,8 +108,93 @@ input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1
 }
 .btn:hover { border-color: var(--muted); }
 
-/* Tree */
+.toggle { display: flex; }
+.btn.seg { border-radius: 0; margin-left: -1px; }
+.btn.seg:first-child { border-radius: 9px 0 0 9px; margin-left: 0; }
+.btn.seg:last-child { border-radius: 0 9px 9px 0; }
+.btn.seg.is-on {
+  background: var(--accent); border-color: var(--accent); color: var(--bg); z-index: 1;
+}
+
+/* Map view */
 main { padding-bottom: 48px; }
+.map-hint { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+
+.columns {
+  display: flex; gap: 14px; align-items: start;
+  overflow-x: auto; padding-bottom: 12px;
+  scroll-snap-type: x proximity;
+}
+.col {
+  flex: 0 0 258px; min-width: 258px;
+  display: flex; flex-direction: column; gap: 8px;
+  scroll-snap-align: start;
+  animation: popin .18s ease both;
+}
+@keyframes popin {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .col { animation: none; }
+}
+
+.col-head {
+  font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--muted); padding: 0 2px 2px;
+}
+
+.box {
+  position: relative; display: block; width: 100%; text-align: left;
+  font: inherit; cursor: pointer;
+  background: var(--surface); color: inherit;
+  border: 1px solid var(--line); border-left: 4px solid var(--dc, var(--accent));
+  border-radius: 11px; padding: 11px 32px 11px 13px;
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.box:hover { transform: translateY(-1px); box-shadow: 0 2px 10px rgba(0,0,0,.07); }
+.box:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.box.is-open {
+  background: color-mix(in srgb, var(--dc, var(--accent)) 11%, var(--surface));
+  border-color: var(--dc, var(--accent));
+}
+.box.is-leaf { border-left-style: dotted; }
+
+.box .b-num {
+  display: block; font-size: 11px; font-variant-numeric: tabular-nums;
+  color: var(--muted); margin-bottom: 2px;
+}
+.box.lvl1 .b-num { color: var(--dc, var(--accent)); font-weight: 600; font-size: 12px; }
+.box .b-title { display: block; font-size: 14px; line-height: 1.35; }
+.box.lvl1 .b-title { font-family: var(--serif); font-size: 17px; font-weight: 600; }
+.box .b-meta { display: block; font-size: 11px; color: var(--muted); margin-top: 5px; }
+.box .b-arrow {
+  position: absolute; right: 11px; top: 50%; transform: translateY(-50%);
+  color: var(--muted); font-size: 12px;
+}
+.box.is-open .b-arrow { color: var(--dc, var(--accent)); }
+
+.col[data-d="1"] .box { --dc: var(--d1); }
+.col[data-d="2"] .box { --dc: var(--d2); }
+.col[data-d="3"] .box { --dc: var(--d3); }
+.col[data-d="4"] .box { --dc: var(--d4); }
+.col[data-d="5"] .box { --dc: var(--d5); }
+.col[data-d="6"] .box { --dc: var(--d6); }
+.col[data-d="7"] .box { --dc: var(--d7); }
+.col[data-d="8"] .box { --dc: var(--d8); }
+
+.leaf-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 11px;
+  padding: 14px; font-size: 13px; color: var(--muted);
+}
+.leaf-card strong { display: block; color: var(--text); font-size: 14px; margin-bottom: 6px; }
+.leaf-card .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.tag {
+  font-size: 11px; padding: 3px 8px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+}
+
+/* Tree (list view) */
 .result-line { color: var(--muted); font-size: 13px; margin: 18px 0 10px; min-height: 1.4em; }
 
 .domain {

@@ -253,7 +253,7 @@ Biological laboratory work
 │   │   │   ├── 6.2.1.1 Chemical and lipid transfection
 │   │   │   ├── 6.2.1.2 Electroporation and nucleofection
 │   │   │   └── 6.2.1.3 Viral transduction
-│   │   ├── 6.2.2 Genome editing (nuclease, base, prime, epigenome)
+│   │   ├── 6.2.2 Genome editing (CRISPR nuclease, base, prime, epigenome)
 │   │   ├── 6.2.3 Knockdown and overexpression systems
 │   │   ├── 6.2.4 Selection and single-cell cloning
 │   │   ├── 6.2.5 Clone screening, genotyping and validation

@@ -2883,7 +2883,7 @@
             },
             {
               "id": "6.2.2",
-              "title": "Genome editing (nuclease, base, prime, epigenome)",
+              "title": "Genome editing (CRISPR nuclease, base, prime, epigenome)",
               "depth": 3,
               "children": [],
               "areas": [

@@ -4,7 +4,7 @@ const el = (id) => document.getElementById(id);
 const treeBox = el("tree");
 
 let DATA = null;
-const state = { query: "", area: "", material: "" };
+const state = { query: "", area: "", material: "", view: "map", path: [] };
 
 // ---------- helpers ----------
 
@@ -88,21 +88,129 @@ function renderNode(node, openDepth) {
   return wrapper;
 }
 
+// ---------- map view ----------
+
+const COLUMN_HEADS = ["Domain", "Branch", "Workflow", "Detail"];
+
+function makeBox(node, level, isOpen) {
+  const hasKids = node.children.length > 0;
+  const box = document.createElement("button");
+  box.type = "button";
+  box.className = `box lvl${level}` + (hasKids ? "" : " is-leaf") + (isOpen ? " is-open" : "");
+  box.setAttribute("aria-expanded", String(isOpen));
+
+  const meta = hasKids
+    ? `${countLeaves(node)} workflow${countLeaves(node) === 1 ? "" : "s"}`
+    : "";
+  box.innerHTML =
+    `<span class="b-num">${escapeHtml(node.id)}</span>` +
+    `<span class="b-title">${highlight(node.title, state.query)}</span>` +
+    (meta ? `<span class="b-meta">${meta}</span>` : "") +
+    (hasKids ? `<span class="b-arrow">›</span>` : "");
+  return box;
+}
+
+function leafCard(node) {
+  const card = document.createElement("div");
+  card.className = "leaf-card";
+  const areas = (node.areas || [])
+    .filter((a) => a !== "all")
+    .map((a) => `<span class="tag">${escapeHtml(DATA.areaLabels[a] || a)}</span>`)
+    .join("");
+  card.innerHTML =
+    `<strong>${escapeHtml(node.id)} ${escapeHtml(node.title)}</strong>` +
+    `This is a single workflow, the smallest unit in the map.` +
+    (areas ? `<div class="tags">${areas}</div>` : "");
+  return card;
+}
+
+function renderMap(domains) {
+  const columns = el("columns");
+  columns.innerHTML = "";
+  if (!domains.length) return;
+
+  // Walk the chosen path, building one column per level.
+  let level = 0;
+  let siblings = domains;
+  let domainId = null;
+
+  while (siblings && siblings.length) {
+    const openId = state.path[level];
+    const open = siblings.find((n) => n.id === openId) || null;
+
+    const col = document.createElement("div");
+    col.className = "col";
+    if (domainId) col.dataset.d = domainId;
+
+    const head = document.createElement("p");
+    head.className = "col-head";
+    head.textContent = COLUMN_HEADS[Math.min(level, COLUMN_HEADS.length - 1)];
+    col.appendChild(head);
+
+    siblings.forEach((node) => {
+      const box = makeBox(node, level + 1, open !== null && node.id === open.id);
+      box.addEventListener("click", () => {
+        const already = state.path[level] === node.id;
+        state.path = state.path.slice(0, level);
+        if (!already) state.path.push(node.id);
+        renderMap(domains);
+        const cols = el("columns");
+        cols.scrollTo({ left: cols.scrollWidth, behavior: "smooth" });
+      });
+      col.appendChild(box);
+    });
+
+    columns.appendChild(col);
+
+    if (!open) break;
+    if (level === 0) {
+      domainId = open.id;
+      col.dataset.d = domainId;
+      columns.querySelectorAll(".col")[0].dataset.d = domainId;
+    }
+    if (!open.children.length) {
+      const last = document.createElement("div");
+      last.className = "col";
+      last.dataset.d = domainId;
+      last.appendChild(leafCard(open));
+      columns.appendChild(last);
+      break;
+    }
+    siblings = open.children;
+    level += 1;
+  }
+}
+
+// ---------- render ----------
+
 function render() {
   const filtering = Boolean(state.query || state.area || state.material);
   const domains = DATA.tree.map(filterTree).filter(Boolean);
 
-  // When filtering, open enough levels that the matches are visible.
-  const openDepth = filtering ? 5 : 1;
+  // A filtered-out branch must not stay selected.
+  const stillValid = [];
+  let level = domains;
+  for (const id of state.path) {
+    const found = (level || []).find((n) => n.id === id);
+    if (!found) break;
+    stillValid.push(id);
+    level = found.children;
+  }
+  state.path = stillValid;
 
-  treeBox.innerHTML = "";
-  domains.forEach((domain) => {
-    const box = document.createElement("section");
-    box.className = "domain";
-    box.dataset.d = domain.id;
-    box.appendChild(renderNode(domain, openDepth));
-    treeBox.appendChild(box);
-  });
+  if (state.view === "map") {
+    renderMap(domains);
+  } else {
+    const openDepth = filtering ? 5 : 1;
+    treeBox.innerHTML = "";
+    domains.forEach((domain) => {
+      const box = document.createElement("section");
+      box.className = "domain";
+      box.dataset.d = domain.id;
+      box.appendChild(renderNode(domain, openDepth));
+      treeBox.appendChild(box);
+    });
+  }
 
   el("empty").hidden = domains.length > 0;
 
@@ -110,6 +218,19 @@ function render() {
   el("resultLine").textContent = filtering
     ? `${shown} of ${DATA.stats.leaves} workflows across ${domains.length} of ${DATA.stats.domains} domains`
     : `${DATA.stats.domains} domains, ${DATA.stats.leaves} workflows, ${DATA.stats.maxDepth} levels deep`;
+}
+
+function setView(view) {
+  state.view = view;
+  el("viewMap").classList.toggle("is-on", view === "map");
+  el("viewList").classList.toggle("is-on", view === "list");
+  el("viewMap").setAttribute("aria-pressed", String(view === "map"));
+  el("viewList").setAttribute("aria-pressed", String(view === "list"));
+  el("map").hidden = view !== "map";
+  el("tree").hidden = view !== "list";
+  el("expand").hidden = view !== "list";
+  el("collapse").hidden = view !== "list";
+  render();
 }
 
 function setAllOpen(open) {
@@ -183,6 +304,8 @@ el("material").addEventListener("change", (e) => {
 
 el("expand").addEventListener("click", () => setAllOpen(true));
 el("collapse").addEventListener("click", () => setAllOpen(false));
+el("viewMap").addEventListener("click", () => setView("map"));
+el("viewList").addEventListener("click", () => setView("list"));
 
 // ---------- init ----------
 
@@ -195,7 +318,7 @@ fetch("taxonomy.json")
     DATA = data;
     fillStats();
     fillSelects();
-    render();
+    setView("map");
   })
   .catch(() => {
     treeBox.innerHTML =
