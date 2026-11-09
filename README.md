@@ -51,12 +51,12 @@ Output is the one attribute that does not overlap. A workflow yields purified RN
 
 Four tie-breaks keep the rule decidable at the edges.
 
-| Tie-break | Rule | Worked example |
+| Tie-break | What it means | Example |
 |---|---|---|
-| 1. Generic beats specialized | Shared outputs live in the generic branch, whatever field uses them | DNA extraction for an eDNA study is still DNA extraction |
-| 2. Two outputs, two homes | A technique used both to make material and to measure it splits in two | Preparative PCR is construction, qPCR is measurement |
-| 3. Operations are not workflows | Single physical actions are steps, not categories | Centrifuging, mixing, sealing, reading a plate |
-| 4. Scale and setting are filters | Volume and context do not create branches | A 5 mL culture and a 2,000 L bioreactor share a branch |
+| 1. Shared work stays shared | Work that many fields do sits in one branch, not in each field | DNA extraction for a river water survey is still DNA extraction |
+| 2. Same technique, different output | A technique used to make something and to measure something splits in two | PCR that makes DNA is construction, qPCR is measurement |
+| 3. A single step is not a workflow | Actions that happen inside everything are steps, not categories | Spinning, mixing, sealing, reading a plate |
+| 4. Scale and setting get tagged | Volume and context do not create branches | A 5 mL culture and a 2,000 L bioreactor share a branch |
 
 **The hard cases are the test.** PCR, gels and centrifugation break most taxonomies. Here each has one address.
 

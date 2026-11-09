@@ -12,10 +12,12 @@ This rule is borrowed from the Ontology for Biomedical Investigations, which div
 
 ### Four tie-breaks
 
-1. **Generic beats specialized.** If the output is the same molecule a hundred labs make, it lives in the generic branch, however specialized the context. Branch 7 and the applied lenses hold only outputs that exist nowhere else.
-2. **One technique, two outputs, two homes.** PCR that makes DNA for a later step is construction (4.1). PCR run to produce a number is measurement (8.2). A gel that recovers a band is purification (3.1.5). A gel that reports a size is measurement (8.4.1).
-3. **Single operations are not workflows.** Centrifuging, mixing, incubating, sealing and reading a plate are steps. They live in the unit operation lens, never as branches.
-4. **Scale and setting are lenses, not branches.** A 2,000 L bioreactor and a 5 mL culture produce the same kind of output. Manufacturing, clinical, environmental and forensic work are tagged, not separately rooted, except where the output genuinely exists only there.
+Most workflows have an obvious home. These four rules settle the ones that do not.
+
+1. **Shared work stays in the shared branch.** DNA extraction is DNA extraction, whether it is for a cancer panel or a river water survey. A specialized branch gets its own entry only when the output shows up nowhere else, like an embedded tissue block.
+2. **Same technique, different output, different home.** PCR that makes DNA for the next step is construction (4.1). PCR run to get a number is measurement (8.2). Gels split the same way. Cutting out a band to recover DNA is purification (3.1.5), and running one to check a size is measurement (8.4.1).
+3. **A single step is not a workflow.** Spinning, mixing, incubating, sealing, reading a plate. These happen inside almost everything, so they are tags on steps instead of branches.
+4. **Scale and setting do not make new branches.** A 5 mL culture and a 2,000 L bioreactor produce the same thing. Clinical, environmental and forensic work get tagged too. The one exception is an output that exists only in that setting.
 
 ---
 
