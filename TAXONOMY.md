@@ -446,36 +446,6 @@ Everything that legitimately overlaps lives here, as tags on workflows, not as b
 
 ---
 
-## Review
-
-Written against the two standards requested: a strategy partner's test of whether the structure holds, and a thesis committee's test of whether the claims are defensible.
-
-### What holds
-
-**The splitting rule survives its hardest cases.** PCR, gel electrophoresis and centrifugation are the three techniques that break every other taxonomy, and each lands cleanly here because the rule asks what the work produces, not what it uses. The structure also predicts its own failures: any real protocol that fits two leaves exposes a rule violation, and any protocol that fits none exposes a gap. That is a testable structure, not a filing cabinet.
-
-**Scale and setting as lenses rather than branches is the right call.** A separate bioprocess branch would duplicate culture, purification and measurement at larger volume. Keeping scale as a tag means a 5 mL culture and a 2,000 L bioreactor sit in the same branch, which is also how the underlying biology behaves.
-
-**Coverage is broad enough to place most labs.** Branch 5 holds whole organisms, branch 8 holds in vivo work, and branches 1 and 2 hold the support work that most published taxonomies omit entirely even though it consumes real bench hours.
-
-### What a reviewer would challenge
-
-**The rule is a synthesis, not a standard.** No published wet-lab taxonomy exists to validate this against. The ontology precedent supports the top-level split, but the four tie-breaks are reasoned, not cited. This should be stated plainly wherever the tree is used.
-
-**Branch 8 is doing too much work.** Twelve children, spanning a plate reader and a cryo-EM session, is wider than any other branch. The defense is that they share an output type. The honest reading is that "data" is a coarser output category than "purified protein," so branch 8 may deserve a split by measurement modality at the next level of rigor.
-
-**Branch 7 and branch 8 have a soft boundary in practice.** Staining a slide and imaging it are one continuous activity to the person doing them. The split is defensible by output (a prepared slide, then an image) but it will feel unnatural to users, and any interface over this tree should show the pair together.
-
-**Several branches are thin relative to the field's real complexity.** Carbohydrate and glycan work (3.4), biosensing (8.10.3) and therapeutic cell engineering (6.4) each compress a substantial literature into a few leaves. They are placeholders pending expansion, not finished analysis.
-
-**Depth is uneven by design, and that is a defect as well as a feature.** Nucleic acid work reaches four levels because it is where the most protocols exist. Plant and organism work stops at three. This reflects source availability, not relative importance, and it will bias anything that counts leaves as a proxy for field size.
-
-### What would settle it
-
-Run real protocols through the tree. Pull several hundred from public repositories across as many branches as possible, and assign each to exactly one leaf. Three numbers decide whether the structure works: the percentage assigned to exactly one leaf, the percentage that fit two or more (rule violations), and the percentage that fit none (missing branches). Agreement between two independent people assigning the same protocols tests whether the rule is teachable, which is the real test of a taxonomy intended for others to use.
-
----
-
 ## Scope
 
 This map covers wet-lab work only, meaning anything performed on physical biological material.

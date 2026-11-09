@@ -495,7 +495,7 @@ The three techniques that break most taxonomies each land cleanly, because the r
 
 | File | What it is |
 |---|---|
-| [`TAXONOMY.md`](TAXONOMY.md) | Source of truth: the full tree, the lenses, and a critical review |
+| [`TAXONOMY.md`](TAXONOMY.md) | Source of truth: the splitting rule, the full tree, and the lenses |
 | [`lenses.yaml`](lenses.yaml) | Research area and material tags, keyed by node id |
 | [`build.py`](build.py) | Generates `docs/taxonomy.json` and `diagram.mmd` from the two files above |
 | [`docs/`](docs/) | The interactive map, published with GitHub Pages |
