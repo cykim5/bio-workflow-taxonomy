@@ -173,10 +173,10 @@ def make_mermaid(root):
     lines = ["flowchart LR", "    ROOT[\"Biological laboratory work\"]"]
     for top in root["children"]:
         key = "N" + top["id"]
-        lines.append(f'    ROOT --> {key}["{top["id"]}. {top["title"]}"]')
+        lines.append(f'    ROOT --> {key}["{mermaid_label(top["id"] + " " + top["title"])}"]')
         for child in top["children"]:
             child_key = "N" + child["id"].replace(".", "_")
-            label = f'{child["id"]} {child["title"]}'
+            label = mermaid_label(f'{child["id"]} {child["title"]}')
             lines.append(f'    {key} --> {child_key}["{label}"]')
     return "\n".join(lines)
 
@@ -186,37 +186,35 @@ def mermaid_key(node_id):
 
 
 def mermaid_label(text):
-    """Mermaid labels are quoted, so only double quotes need replacing."""
+    """Mermaid reads a label that opens with "1." as a markdown list and
+    renders "Unsupported markdown: list", so the period is dropped."""
+    text = re.sub(r"^(\d+)\.\s+", r"\1 ", text)
     return text.replace('"', "'")
 
 
 def make_branch_outline(root):
-    """One diagram per domain, covering every subsection, for the README."""
-    blocks = []
+    """The eight domains only, as a diagram and a table. The full tree
+    lives in TAXONOMY.md, so the README stays readable."""
+    lines = ["flowchart LR", '    ROOT("Biological laboratory work")']
     for top in root["children"]:
-        header = f'### {top["id"]}. {top["title"]}'
-        if top.get("output"):
-            header += f'\n\n*Output: {top["output"]}.*'
-        header += (f'\n\n{count_leaves(top)} workflows in '
-                   f'{len(top["children"])} branches.')
+        key = mermaid_key(top["id"])
+        label = mermaid_label(f'{top["id"]} {top["title"]}')
+        lines.append(f'    ROOT --> {key}["{label}"]')
+    lines.append("    class ROOT root;")
+    lines.append("    classDef root fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;")
+    diagram = "```mermaid\n" + "\n".join(lines) + "\n```"
 
-        root_key = mermaid_key(top["id"])
-        lines = ["flowchart LR",
-                 f'    {root_key}("{top["id"]}. {mermaid_label(top["title"])}")']
+    rows = ["| # | Domain | Output it produces | Branches | Workflows |",
+            "|---|---|---|---|---|"]
+    for top in root["children"]:
+        output = top.get("output", "")
+        output = output[:1].upper() + output[1:] if output else ""
+        rows.append(
+            f'| {top["id"]} | **{top["title"]}** | {output} '
+            f'| {len(top["children"])} | {count_leaves(top)} |'
+        )
 
-        def walk(node, parent_key):
-            for child in node["children"]:
-                key = mermaid_key(child["id"])
-                label = mermaid_label(f'{child["id"]} {child["title"]}')
-                lines.append(f'    {parent_key} --> {key}["{label}"]')
-                walk(child, key)
-
-        walk(top, root_key)
-        lines.append(f'    class {root_key} domain;')
-        lines.append("    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;")
-        diagram = "```mermaid\n" + "\n".join(lines) + "\n```"
-        blocks.append(header + "\n\n" + diagram)
-    return "\n\n".join(blocks)
+    return diagram + "\n\n" + "\n".join(rows)
 
 
 def update_readme(outline):

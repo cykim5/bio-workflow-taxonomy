@@ -1,533 +1,154 @@
 # Biological Workflow Map
 
-A structural map of what wet labs and life science companies do at the bench, organized so that every workflow has exactly one place.
+**A MECE map of what happens at a biology bench.** Every workflow in a wet lab, sorted so that each one has exactly one place: mutually exclusive, so nothing is double counted, and collectively exhaustive, so nothing is missed.
 
-**[Browse the interactive map](https://cykim5.github.io/bio-workflow-taxonomy/)**
+8 domains. 264 workflows. 4 levels deep.
+
+**[Browse the interactive map](https://cykim5.github.io/bio-workflow-taxonomy/)** or read the full tree in **[TAXONOMY.md](TAXONOMY.md)**.
+
+## Why this exists
+
+This is the base layer of a larger project on **lab automation assessment**: working out which parts of a given lab are worth automating, and what the return would be.
+
+That assessment runs in three stages, and each one depends on the stage before it.
+
+```mermaid
+flowchart LR
+    A["<b>1. Describe</b><br/>What does this lab<br/>actually do?"] --> B["<b>2. Assess feasibility</b><br/>What can a robot<br/>do today?"]
+    B --> C["<b>3. Size the return</b><br/>What is worth<br/>automating first?"]
+    A -.-> M(["This map<br/>supplies stage 1"])
+    class M base;
+    classDef base fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
+```
+
+A lab describes its work in its own words. Those words have to resolve to a shared set of workflows before anything can be scored, compared across labs, or aggregated into a benchmark. **Without a MECE base, the analysis breaks in two specific ways:**
+
+| Failure | Cause | Consequence |
+|---|---|---|
+| Double counting | The same workflow sits in two categories | Savings are counted twice, and the business case inflates |
+| Blind spots | No category fits a real workflow | The biggest opportunity is invisible because nothing captures it |
+
+Automation feasibility and cost are therefore deliberately **not** in this map. They are attributes measured against it, which keeps the structure stable as robots improve. A workflow that is manual today and automated in three years does not move branches; only its score changes.
+
+## The problem with existing classifications
+
+Biology already has many ways to group lab work. None of them is MECE, because each mixes several axes at the same level.
+
+| Source | How it splits | Why it overlaps |
+|---|---|---|
+| Protocol publishers | Research field | One ELISA is immunology, cancer biology and bioprocess at once |
+| Equipment vendors | Application and technique | "NGS" and "liquid transfer" are not the same kind of thing |
+| University departments | Biological question | Two labs asking different questions run identical bench work |
+| Method ontologies | Mixed, at the top level | Centrifugation appears as a sibling of whole disciplines |
+
+Each is useful for finding a paper or buying an instrument. None can carry analysis, because a workflow counted in three places cannot be counted once.
 
 ## The rule
 
 **Every workflow is filed under the kind of thing it exists to produce.**
 
-Research field, technique and instrument all overlap, so an ELISA belongs to immunology, cancer biology and bioprocess at the same time. Output does not overlap: a workflow produces purified RNA, or an engineered cell line, or a number, but never two at once. That single rule is what keeps the branches mutually exclusive.
+Output is the one attribute that does not overlap. A workflow yields purified RNA, or an engineered cell line, or a number, but never two at once. Field, technique and instrument all overlap, so they become filters over the map instead of branches in it.
 
-Everything that does overlap becomes a lens instead: research area, function, setting, scale, regulatory regime, unit operation, and material acted on.
+Four tie-breaks keep the rule decidable at the edges.
 
-## The eight domains
+| Tie-break | Rule | Worked example |
+|---|---|---|
+| 1. Generic beats specialized | Shared outputs live in the generic branch, whatever field uses them | DNA extraction for an eDNA study is still DNA extraction |
+| 2. Two outputs, two homes | A technique used both to make material and to measure it splits in two | Preparative PCR is construction, qPCR is measurement |
+| 3. Operations are not workflows | Single physical actions are steps, not categories | Centrifuging, mixing, sealing, reading a plate |
+| 4. Scale and setting are filters | Volume and context do not create branches | A 5 mL culture and a 2,000 L bioreactor share a branch |
 
-```mermaid
-flowchart LR
-    ROOT["Biological laboratory work"]
-    ROOT --> N1["1. Reagents and materials prepared"]
-    ROOT --> N2["2. Specimens acquired, processed and banked"]
-    ROOT --> N3["3. Biomolecules isolated and purified"]
-    ROOT --> N4["4. Biomolecules and constructs built"]
-    ROOT --> N5["5. Living systems cultured and maintained"]
-    ROOT --> N6["6. Living systems engineered"]
-    ROOT --> N7["7. Specimens prepared for analysis"]
-    ROOT --> N8["8. Measurements and characterization"]
-```
+**The hard cases are the test.** PCR, gels and centrifugation break most taxonomies. Here each has one address.
 
-They run in order from inputs to answers. 8 domains, 264 workflows, up to 4 levels deep.
+| Activity | Where it lands | Why |
+|---|---|---|
+| PCR to make DNA for a later step | 4.1.1.1 Fragment generation | Output is material |
+| qPCR to produce a number | 8.2.1 qPCR and RT-qPCR | Output is data |
+| Gel run to recover a band | 3.1.5 Cleanup, size selection and gel recovery | Output is material |
+| Gel run to report a size | 8.4.1 Agarose and polyacrylamide gel analysis | Output is data |
+| Centrifuging, mixing, incubating | Not in the map | Steps, not workflows |
 
-| Domain | Output |
-|---|---|
-| 1. Reagents and materials prepared | A ready-to-use input for other work |
-| 2. Specimens acquired, processed and banked | A specimen ready to use or ready to store |
-| 3. Biomolecules isolated and purified | A purified, naturally occurring biomolecule or particle |
-| 4. Biomolecules and constructs built | A biomolecule that did not exist before this work |
-| 5. Living systems cultured and maintained | A living, propagated biological system |
-| 6. Living systems engineered | A system whose genome or composition has been changed |
-| 7. Specimens prepared for analysis | A specimen in the exact form an instrument requires |
-| 8. Measurements and characterization | Data about a sample, system or organism |
-
-A fuller diagram covering the second level is in [diagram.mmd](diagram.mmd).
-
-## What sits inside each domain
-
-One diagram per domain, showing every subsection down to the deepest level.
-These render as graphics on GitHub but are not clickable, since GitHub strips
-interactivity from Mermaid. For a version you can click through, open the
-[interactive map](https://cykim5.github.io/bio-workflow-taxonomy/).
+## The map
 
 <!-- BEGIN BRANCHES -->
 <!-- Generated by build.py. Edit TAXONOMY.md, then rerun it. -->
 
-### 1. Reagents and materials prepared
-
-*Output: a ready-to-use input for other work.*
-
-23 workflows in 6 branches.
-
 ```mermaid
 flowchart LR
-    N1("1. Reagents and materials prepared")
-    N1 --> N1_1["1.1 Solutions and buffers"]
-    N1_1 --> N1_1_1["1.1.1 Stock preparation (weighing, dissolving, sterilization)"]
-    N1_1 --> N1_1_2["1.1.2 Working dilution and aliquoting"]
-    N1_1 --> N1_1_3["1.1.3 pH, ionic strength and osmolality adjustment"]
-    N1_1 --> N1_1_4["1.1.4 Solution QC and shelf-life management"]
-    N1 --> N1_2["1.2 Culture media and growth substrates"]
-    N1_2 --> N1_2_1["1.2.1 Microbial media (broth, agar, selective, differential)"]
-    N1_2 --> N1_2_2["1.2.2 Mammalian and insect media with supplements and sera"]
-    N1_2 --> N1_2_3["1.2.3 Plant tissue culture media and hormone series"]
-    N1_2 --> N1_2_4["1.2.4 Matrices, scaffolds and coatings for 3D culture"]
-    N1_2 --> N1_2_5["1.2.5 Organism diets and bedding substrates"]
-    N1 --> N1_3["1.3 Reaction mixes and assay-ready plates"]
-    N1_3 --> N1_3_1["1.3.1 Enzyme and master mix assembly"]
-    N1_3 --> N1_3_2["1.3.2 Primer, probe and oligo working plates"]
-    N1_3 --> N1_3_3["1.3.3 Assay plate stamping and reagent pre-loading"]
-    N1 --> N1_4["1.4 Compound and library management"]
-    N1_4 --> N1_4_1["1.4.1 Solubilization and stock plating"]
-    N1_4 --> N1_4_2["1.4.2 Dose and dilution series construction"]
-    N1_4 --> N1_4_3["1.4.3 Library replication and cherry picking"]
-    N1_4 --> N1_4_4["1.4.4 Storage, freeze-thaw tracking and integrity checks"]
-    N1 --> N1_5["1.5 Chemically synthesized reagents"]
-    N1_5 --> N1_5_1["1.5.1 Oligonucleotide synthesis and purification"]
-    N1_5 --> N1_5_2["1.5.2 Peptide synthesis and purification"]
-    N1_5 --> N1_5_3["1.5.3 Labeled and modified reagents (fluorophore, biotin, isotope)"]
-    N1_5 --> N1_5_4["1.5.4 Radiolabeled reagent preparation"]
-    N1 --> N1_6["1.6 Labware, containment and consumable preparation"]
-    N1_6 --> N1_6_1["1.6.1 Washing, autoclaving and depyrogenation"]
-    N1_6 --> N1_6_2["1.6.2 Sterile field and aseptic workspace setup"]
-    N1_6 --> N1_6_3["1.6.3 Containment, decontamination and waste handling"]
-    class N1 domain;
-    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
+    ROOT("Biological laboratory work")
+    ROOT --> N1["1 Reagents and materials prepared"]
+    ROOT --> N2["2 Specimens acquired, processed and banked"]
+    ROOT --> N3["3 Biomolecules isolated and purified"]
+    ROOT --> N4["4 Biomolecules and constructs built"]
+    ROOT --> N5["5 Living systems cultured and maintained"]
+    ROOT --> N6["6 Living systems engineered"]
+    ROOT --> N7["7 Specimens prepared for analysis"]
+    ROOT --> N8["8 Measurements and characterization"]
+    class ROOT root;
+    classDef root fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
 ```
 
-### 2. Specimens acquired, processed and banked
-
-*Output: a biological specimen that is ready to use or ready to store.*
-
-21 workflows in 5 branches.
-
-```mermaid
-flowchart LR
-    N2("2. Specimens acquired, processed and banked")
-    N2 --> N2_1["2.1 Acquisition and accessioning"]
-    N2_1 --> N2_1_1["2.1.1 Human subject and clinical specimen collection"]
-    N2_1 --> N2_1_2["2.1.2 Animal specimen collection"]
-    N2_1 --> N2_1_3["2.1.3 Plant, soil and agricultural sampling"]
-    N2_1 --> N2_1_4["2.1.4 Environmental and field sampling (water, air, sediment, swabs)"]
-    N2_1 --> N2_1_5["2.1.5 Microbial and clinical isolate recovery"]
-    N2_1 --> N2_1_6["2.1.6 Labeling, chain of custody and consent documentation"]
-    N2 --> N2_2["2.2 Primary processing"]
-    N2_2 --> N2_2_1["2.2.1 Blood and body fluid fractionation (plasma, serum, PBMC, CSF)"]
-    N2_2 --> N2_2_2["2.2.2 Solid tissue dissection, grossing and trimming"]
-    N2_2 --> N2_2_3["2.2.3 Tissue dissociation to cells or nuclei"]
-    N2_2 --> N2_2_4["2.2.4 Cell lysis and homogenization"]
-    N2_2 --> N2_2_5["2.2.5 Field concentration and filtration of dilute samples"]
-    N2 --> N2_3["2.3 Stabilization and preservation"]
-    N2_3 --> N2_3_1["2.3.1 Chemical fixation and preservative addition"]
-    N2_3 --> N2_3_2["2.3.2 Snap freezing and cryopreservation"]
-    N2_3 --> N2_3_3["2.3.3 Drying, lyophilization and card-based storage"]
-    N2 --> N2_4["2.4 Formatting and distribution"]
-    N2_4 --> N2_4_1["2.4.1 Aliquoting and tube-to-plate transfer"]
-    N2_4 --> N2_4_2["2.4.2 Plate reformatting and consolidation"]
-    N2_4 --> N2_4_3["2.4.3 Input normalization by concentration or volume"]
-    N2 --> N2_5["2.5 Biobanking and inventory"]
-    N2_5 --> N2_5_1["2.5.1 Controlled-rate freezing and vapor-phase storage"]
-    N2_5 --> N2_5_2["2.5.2 Inventory systems, barcoding and location tracking"]
-    N2_5 --> N2_5_3["2.5.3 Retrieval, thaw and re-banking"]
-    N2_5 --> N2_5_4["2.5.4 Specimen integrity QC gates"]
-    class N2 domain;
-    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
-```
-
-### 3. Biomolecules isolated and purified
-
-*Output: a purified, naturally occurring biomolecule or particle.*
-
-20 workflows in 5 branches.
-
-```mermaid
-flowchart LR
-    N3("3. Biomolecules isolated and purified")
-    N3 --> N3_1["3.1 Nucleic acid isolation"]
-    N3_1 --> N3_1_1["3.1.1 Genomic and total DNA"]
-    N3_1 --> N3_1_2["3.1.2 RNA (total, mRNA, small RNA, nascent)"]
-    N3_1 --> N3_1_3["3.1.3 Plasmid and episomal DNA"]
-    N3_1 --> N3_1_4["3.1.4 Low-input and cell-free (cfDNA, ctDNA, single-cell, ancient, eDNA)"]
-    N3_1 --> N3_1_5["3.1.5 Cleanup, size selection and gel recovery"]
-    N3_1 --> N3_1_6["3.1.6 Elution, concentration and buffer conditioning"]
-    N3 --> N3_2["3.2 Protein isolation and purification"]
-    N3_2 --> N3_2_1["3.2.1 Extraction, clarification and solubilization"]
-    N3_2 --> N3_2_2["3.2.2 Affinity capture (tag, Protein A, custom ligand)"]
-    N3_2 --> N3_2_3["3.2.3 Chromatographic separation (ion exchange, hydrophobic, size exclusion)"]
-    N3_2 --> N3_2_4["3.2.4 Precipitation and phase separation"]
-    N3_2 --> N3_2_5["3.2.5 Buffer exchange, concentration and polishing"]
-    N3_2 --> N3_2_6["3.2.6 Immunoprecipitation and interaction pulldown"]
-    N3 --> N3_3["3.3 Lipid, metabolite and small-molecule extraction"]
-    N3_3 --> N3_3_1["3.3.1 Quenching and extraction"]
-    N3_3 --> N3_3_2["3.3.2 Liquid-liquid and solid-phase cleanup"]
-    N3_3 --> N3_3_3["3.3.3 Fractionation and class enrichment"]
-    N3 --> N3_4["3.4 Carbohydrate, glycan and other biopolymer isolation"]
-    N3 --> N3_5["3.5 Complexes, organelles and particles"]
-    N3_5 --> N3_5_1["3.5.1 Subcellular fractionation (nuclei, mitochondria, membranes)"]
-    N3_5 --> N3_5_2["3.5.2 Chromatin, ribosome and ribonucleoprotein isolation"]
-    N3_5 --> N3_5_3["3.5.3 Extracellular vesicle isolation"]
-    N3_5 --> N3_5_4["3.5.4 Virus and virus-like particle purification"]
-    class N3 domain;
-    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
-```
-
-### 4. Biomolecules and constructs built
-
-*Output: a biomolecule that did not exist before this work.*
-
-36 workflows in 6 branches.
-
-```mermaid
-flowchart LR
-    N4("4. Biomolecules and constructs built")
-    N4 --> N4_1["4.1 Nucleic acid construction"]
-    N4_1 --> N4_1_1["4.1.1 Fragment generation"]
-    N4_1_1 --> N4_1_1_1["4.1.1.1 PCR amplification (preparative)"]
-    N4_1_1 --> N4_1_1_2["4.1.1.2 Restriction digestion"]
-    N4_1_1 --> N4_1_1_3["4.1.1.3 De novo gene and fragment synthesis"]
-    N4_1 --> N4_1_2["4.1.2 Assembly (ligation, Gibson, Golden Gate, recombineering, gateway)"]
-    N4_1 --> N4_1_3["4.1.3 Propagation in host and construct recovery"]
-    N4_1 --> N4_1_4["4.1.4 Verification (restriction mapping, sequencing, gel check)"]
-    N4_1 --> N4_1_5["4.1.5 Library construction"]
-    N4_1_5 --> N4_1_5_1["4.1.5.1 Site-directed and saturation mutagenesis"]
-    N4_1_5 --> N4_1_5_2["4.1.5.2 Pooled guide, shRNA and variant libraries"]
-    N4_1_5 --> N4_1_5_3["4.1.5.3 Barcoded and combinatorial libraries"]
-    N4 --> N4_2["4.2 Sequencing library preparation"]
-    N4_2 --> N4_2_1["4.2.1 Fragmentation, end repair and adapter ligation"]
-    N4_2 --> N4_2_2["4.2.2 Indexing amplification"]
-    N4_2 --> N4_2_3["4.2.3 Cleanup and size selection"]
-    N4_2 --> N4_2_4["4.2.4 Target enrichment and depletion"]
-    N4_2 --> N4_2_5["4.2.5 Library QC, normalization and pooling"]
-    N4_2 --> N4_2_6["4.2.6 Assay-specific variants"]
-    N4_2_6 --> N4_2_6_1["4.2.6.1 Whole genome, exome and targeted panels"]
-    N4_2_6 --> N4_2_6_2["4.2.6.2 RNA-seq and small RNA"]
-    N4_2_6 --> N4_2_6_3["4.2.6.3 Single-cell and single-nucleus"]
-    N4_2_6 --> N4_2_6_4["4.2.6.4 Spatial transcriptomics"]
-    N4_2_6 --> N4_2_6_5["4.2.6.5 Epigenomics (methylation, ATAC, ChIP, Hi-C)"]
-    N4_2_6 --> N4_2_6_6["4.2.6.6 Long-read and native-molecule"]
-    N4_2_6 --> N4_2_6_7["4.2.6.7 Amplicon and metagenomic"]
-    N4 --> N4_3["4.3 Recombinant protein production"]
-    N4_3 --> N4_3_1["4.3.1 Expression construct and host selection"]
-    N4_3 --> N4_3_2["4.3.2 Expression culture and induction"]
-    N4_3 --> N4_3_3["4.3.3 Cell-free expression"]
-    N4_3 --> N4_3_4["4.3.4 Harvest and capture (purification continues at 3.2)"]
-    N4 --> N4_4["4.4 Antibody and binder generation"]
-    N4_4 --> N4_4_1["4.4.1 Immunization and hybridoma development"]
-    N4_4 --> N4_4_2["4.4.2 Display selection (phage, yeast, ribosome)"]
-    N4_4 --> N4_4_3["4.4.3 Single B cell and repertoire cloning"]
-    N4_4 --> N4_4_4["4.4.4 Recombinant expression and lead characterization"]
-    N4 --> N4_5["4.5 Chemical modification and conjugation"]
-    N4_5 --> N4_5_1["4.5.1 Labeling and tagging (fluorophore, biotin, isotope)"]
-    N4_5 --> N4_5_2["4.5.2 Crosslinking and bioconjugation"]
-    N4_5 --> N4_5_3["4.5.3 Antibody-drug and polymer conjugates"]
-    N4_5 --> N4_5_4["4.5.4 In vitro transcription and RNA modification"]
-    N4 --> N4_6["4.6 Formulated biological materials"]
-    N4_6 --> N4_6_1["4.6.1 Lipid nanoparticle and liposome formulation"]
-    N4_6 --> N4_6_2["4.6.2 Hydrogels, scaffolds and biomaterials"]
-    N4_6 --> N4_6_3["4.6.3 Drug product formulation and stabilization"]
-    class N4 domain;
-    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
-```
-
-### 5. Living systems cultured and maintained
-
-*Output: a living, propagated biological system.*
-
-39 workflows in 7 branches.
-
-```mermaid
-flowchart LR
-    N5("5. Living systems cultured and maintained")
-    N5 --> N5_1["5.1 Microbial culture"]
-    N5_1 --> N5_1_1["5.1.1 Isolation, streaking and single-colony recovery"]
-    N5_1 --> N5_1_2["5.1.2 Liquid culture, growth monitoring and induction"]
-    N5_1 --> N5_1_3["5.1.3 Anaerobic, fastidious and extremophile culture"]
-    N5_1 --> N5_1_4["5.1.4 Consortia, microbiome and enrichment culture"]
-    N5_1 --> N5_1_5["5.1.5 Bacteriophage propagation"]
-    N5_1 --> N5_1_6["5.1.6 Strain banking and revival"]
-    N5 --> N5_2["5.2 Animal cell culture"]
-    N5_2 --> N5_2_1["5.2.1 Thaw, seeding and establishment"]
-    N5_2 --> N5_2_2["5.2.2 Feeding, passaging and expansion"]
-    N5_2 --> N5_2_3["5.2.3 Suspension and bioreactor-adapted culture"]
-    N5_2 --> N5_2_4["5.2.4 Primary cell isolation and culture"]
-    N5_2 --> N5_2_5["5.2.5 Co-culture and conditioned media systems"]
-    N5_2 --> N5_2_6["5.2.6 Cell banking (master and working banks)"]
-    N5_2 --> N5_2_7["5.2.7 Identity, mycoplasma and sterility monitoring"]
-    N5 --> N5_3["5.3 Stem cell and advanced in vitro models"]
-    N5_3 --> N5_3_1["5.3.1 Pluripotent stem cell derivation and maintenance"]
-    N5_3 --> N5_3_2["5.3.2 Directed differentiation"]
-    N5_3 --> N5_3_3["5.3.3 Organoid establishment, passaging and maturation"]
-    N5_3 --> N5_3_4["5.3.4 3D, scaffold and bioprinted culture"]
-    N5_3 --> N5_3_5["5.3.5 Organ-on-chip and perfused systems"]
-    N5_3 --> N5_3_6["5.3.6 Tissue explant and slice culture"]
-    N5 --> N5_4["5.4 Plant and algal culture"]
-    N5_4 --> N5_4_1["5.4.1 Sterile seed, explant and callus culture"]
-    N5_4 --> N5_4_2["5.4.2 Regeneration, rooting and acclimatization"]
-    N5_4 --> N5_4_3["5.4.3 Hydroponic and controlled-environment growth"]
-    N5_4 --> N5_4_4["5.4.4 Greenhouse and field propagation"]
-    N5 --> N5_5["5.5 Virus and vector propagation"]
-    N5_5 --> N5_5_1["5.5.1 Virus isolation and propagation in host cells"]
-    N5_5 --> N5_5_2["5.5.2 Viral vector production (lentivirus, AAV, adenovirus)"]
-    N5_5 --> N5_5_3["5.5.3 Harvest, concentration and purification"]
-    N5_5 --> N5_5_4["5.5.4 High-containment propagation"]
-    N5 --> N5_6["5.6 Whole organism husbandry"]
-    N5_6 --> N5_6_1["5.6.1 Rodent colony management and breeding"]
-    N5_6 --> N5_6_2["5.6.2 Non-mammalian models (zebrafish, Drosophila, C. elegans, Xenopus)"]
-    N5_6 --> N5_6_3["5.6.3 Insects, arthropods and vectors"]
-    N5_6 --> N5_6_4["5.6.4 Gnotobiotic and germ-free systems"]
-    N5_6 --> N5_6_5["5.6.5 Aquatic, avian and large animal systems"]
-    N5_6 --> N5_6_6["5.6.6 Health monitoring, welfare and colony QC"]
-    N5 --> N5_7["5.7 Scaled culture and bioprocessing"]
-    N5_7 --> N5_7_1["5.7.1 Inoculum development and seed train"]
-    N5_7 --> N5_7_2["5.7.2 Bioreactor operation, feeding and control"]
-    N5_7 --> N5_7_3["5.7.3 In-process monitoring and sampling"]
-    N5_7 --> N5_7_4["5.7.4 Harvest and clarification"]
-    N5_7 --> N5_7_5["5.7.5 Downstream processing at scale"]
-    N5_7 --> N5_7_6["5.7.6 Formulation, fill and finish"]
-    class N5 domain;
-    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
-```
-
-### 6. Living systems engineered
-
-*Output: a biological system whose genome or composition has been changed.*
-
-26 workflows in 5 branches.
-
-```mermaid
-flowchart LR
-    N6("6. Living systems engineered")
-    N6 --> N6_1["6.1 Microbial engineering"]
-    N6_1 --> N6_1_1["6.1.1 Competent cell preparation"]
-    N6_1 --> N6_1_2["6.1.2 Transformation, conjugation and electroporation"]
-    N6_1 --> N6_1_3["6.1.3 Selection, outgrowth and colony isolation"]
-    N6_1 --> N6_1_4["6.1.4 Genome integration, deletion and marker curing"]
-    N6_1 --> N6_1_5["6.1.5 Clone screening and strain verification"]
-    N6 --> N6_2["6.2 Cultured cell engineering"]
-    N6_2 --> N6_2_1["6.2.1 Delivery"]
-    N6_2_1 --> N6_2_1_1["6.2.1.1 Chemical and lipid transfection"]
-    N6_2_1 --> N6_2_1_2["6.2.1.2 Electroporation and nucleofection"]
-    N6_2_1 --> N6_2_1_3["6.2.1.3 Viral transduction"]
-    N6_2 --> N6_2_2["6.2.2 Genome editing (CRISPR nuclease, base, prime, epigenome)"]
-    N6_2 --> N6_2_3["6.2.3 Knockdown and overexpression systems"]
-    N6_2 --> N6_2_4["6.2.4 Selection and single-cell cloning"]
-    N6_2 --> N6_2_5["6.2.5 Clone screening, genotyping and validation"]
-    N6_2 --> N6_2_6["6.2.6 Stable line establishment and banking"]
-    N6 --> N6_3["6.3 Whole organism engineering"]
-    N6_3 --> N6_3_1["6.3.1 Embryo manipulation and microinjection"]
-    N6_3 --> N6_3_2["6.3.2 Transgenic and knockout line generation"]
-    N6_3 --> N6_3_3["6.3.3 Breeding schemes, crossing and genotyping"]
-    N6_3 --> N6_3_4["6.3.4 Plant transformation (Agrobacterium, biolistic, protoplast)"]
-    N6_3 --> N6_3_5["6.3.5 Line establishment, backcrossing and seed stock"]
-    N6 --> N6_4["6.4 Therapeutic cell engineering"]
-    N6_4 --> N6_4_1["6.4.1 Primary cell isolation and activation"]
-    N6_4 --> N6_4_2["6.4.2 Gene transfer and editing of primary cells"]
-    N6_4 --> N6_4_3["6.4.3 Expansion and enrichment"]
-    N6_4 --> N6_4_4["6.4.4 Formulation, cryopreservation and release preparation"]
-    N6 --> N6_5["6.5 Synthetic biology system construction"]
-    N6_5 --> N6_5_1["6.5.1 Pathway design, assembly and refactoring"]
-    N6_5 --> N6_5_2["6.5.2 Strain and chassis optimization"]
-    N6_5 --> N6_5_3["6.5.3 Directed evolution and selection rounds"]
-    N6_5 --> N6_5_4["6.5.4 Cell-free and minimal system construction"]
-    class N6 domain;
-    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
-```
-
-### 7. Specimens prepared for analysis
-
-*Output: a specimen in the exact physical form an instrument requires.*
-
-43 workflows in 8 branches.
-
-```mermaid
-flowchart LR
-    N7("7. Specimens prepared for analysis")
-    N7 --> N7_1["7.1 Histology and pathology preparation"]
-    N7_1 --> N7_1_1["7.1.1 Fixation, decalcification and grossing"]
-    N7_1 --> N7_1_2["7.1.2 Processing, embedding and block preparation"]
-    N7_1 --> N7_1_3["7.1.3 Sectioning (microtome, cryostat, vibratome)"]
-    N7_1 --> N7_1_4["7.1.4 Routine and special staining"]
-    N7_1 --> N7_1_5["7.1.5 Immunohistochemistry and multiplex immunofluorescence"]
-    N7_1 --> N7_1_6["7.1.6 In situ hybridization on sections"]
-    N7_1 --> N7_1_7["7.1.7 Coverslipping and slide finishing"]
-    N7_1 --> N7_1_8["7.1.8 Tissue microarray construction"]
-    N7 --> N7_2["7.2 Light microscopy preparation"]
-    N7_2 --> N7_2_1["7.2.1 Fixation and permeabilization"]
-    N7_2 --> N7_2_2["7.2.2 Immunofluorescence and dye labeling"]
-    N7_2 --> N7_2_3["7.2.3 FISH and in situ detection"]
-    N7_2 --> N7_2_4["7.2.4 Clearing and expansion"]
-    N7_2 --> N7_2_5["7.2.5 Mounting and slide assembly"]
-    N7_2 --> N7_2_6["7.2.6 Live-imaging chamber and dish setup"]
-    N7 --> N7_3["7.3 Electron microscopy preparation"]
-    N7_3 --> N7_3_1["7.3.1 Chemical fixation and en bloc staining"]
-    N7_3 --> N7_3_2["7.3.2 High-pressure freezing and freeze substitution"]
-    N7_3 --> N7_3_3["7.3.3 Dehydration, infiltration and resin embedding"]
-    N7_3 --> N7_3_4["7.3.4 Ultramicrotomy and grid mounting"]
-    N7_3 --> N7_3_5["7.3.5 Negative staining and post-section staining"]
-    N7_3 --> N7_3_6["7.3.6 Immunogold labeling"]
-    N7 --> N7_4["7.4 Structural biology preparation"]
-    N7_4 --> N7_4_1["7.4.1 Sample homogeneity and stability screening"]
-    N7_4 --> N7_4_2["7.4.2 Crystallization screening and optimization"]
-    N7_4 --> N7_4_3["7.4.3 Crystal harvesting and cryoprotection"]
-    N7_4 --> N7_4_4["7.4.4 Cryo-EM grid preparation and vitrification"]
-    N7_4 --> N7_4_5["7.4.5 Grid clipping, screening and storage"]
-    N7_4 --> N7_4_6["7.4.6 NMR and solution scattering sample preparation"]
-    N7 --> N7_5["7.5 Cytometry preparation"]
-    N7_5 --> N7_5_1["7.5.1 Single-cell suspension and debris removal"]
-    N7_5 --> N7_5_2["7.5.2 Surface and intracellular antibody staining"]
-    N7_5 --> N7_5_3["7.5.3 Fixation, permeabilization and viability dyes"]
-    N7_5 --> N7_5_4["7.5.4 Compensation and control panels"]
-    N7_5 --> N7_5_5["7.5.5 Mass cytometry labeling and barcoding"]
-    N7 --> N7_6["7.6 Mass spectrometry and chromatography preparation"]
-    N7_6 --> N7_6_1["7.6.1 Reduction, alkylation and proteolytic digestion"]
-    N7_6 --> N7_6_2["7.6.2 Peptide cleanup, desalting and fractionation"]
-    N7_6 --> N7_6_3["7.6.3 Post-translational modification enrichment"]
-    N7_6 --> N7_6_4["7.6.4 Isobaric and metabolic labeling"]
-    N7_6 --> N7_6_5["7.6.5 Metabolite and lipid extract conditioning"]
-    N7_6 --> N7_6_6["7.6.6 Derivatization and vial or plate loading"]
-    N7 --> N7_7["7.7 Electrophoresis and blotting preparation"]
-    N7_7 --> N7_7_1["7.7.1 Sample denaturation and loading preparation"]
-    N7_7 --> N7_7_2["7.7.2 Gel casting and assembly"]
-    N7_7 --> N7_7_3["7.7.3 Transfer, membrane blocking and probing"]
-    N7 --> N7_8["7.8 Spatial and correlative preparation"]
-    N7_8 --> N7_8_1["7.8.1 Spatial omics slide preparation"]
-    N7_8 --> N7_8_2["7.8.2 Laser capture microdissection"]
-    N7_8 --> N7_8_3["7.8.3 Correlative and multimodal specimen preparation"]
-    class N7 domain;
-    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
-```
-
-### 8. Measurements and characterization
-
-*Output: data about a sample, system or organism.*
-
-56 workflows in 12 branches.
-
-```mermaid
-flowchart LR
-    N8("8. Measurements and characterization")
-    N8 --> N8_1["8.1 Quantity, quality and integrity assays"]
-    N8_1 --> N8_1_1["8.1.1 Nucleic acid concentration and integrity"]
-    N8_1 --> N8_1_2["8.1.2 Protein concentration and purity"]
-    N8_1 --> N8_1_3["8.1.3 Cell counting, viability and confluency"]
-    N8_1 --> N8_1_4["8.1.4 Contamination testing (endotoxin, mycoplasma, sterility, bioburden)"]
-    N8 --> N8_2["8.2 Amplification-based detection and quantification"]
-    N8_2 --> N8_2_1["8.2.1 qPCR and RT-qPCR"]
-    N8_2 --> N8_2_2["8.2.2 Digital PCR"]
-    N8_2 --> N8_2_3["8.2.3 Isothermal and point-of-care amplification"]
-    N8_2 --> N8_2_4["8.2.4 Melt curve and genotyping assays"]
-    N8 --> N8_3["8.3 Sequencing readout"]
-    N8_3 --> N8_3_1["8.3.1 Short-read sequencing runs"]
-    N8_3 --> N8_3_2["8.3.2 Long-read and native-molecule sequencing"]
-    N8_3 --> N8_3_3["8.3.3 Sanger sequencing and fragment analysis"]
-    N8_3 --> N8_3_4["8.3.4 Run QC and base-level quality assessment"]
-    N8 --> N8_4["8.4 Separation-based analysis"]
-    N8_4 --> N8_4_1["8.4.1 Agarose and polyacrylamide gel analysis"]
-    N8_4 --> N8_4_2["8.4.2 Western blot detection"]
-    N8_4 --> N8_4_3["8.4.3 Capillary and microfluidic electrophoresis"]
-    N8_4 --> N8_4_4["8.4.4 Liquid and gas chromatography"]
-    N8_4 --> N8_4_5["8.4.5 Mass spectrometry acquisition"]
-    N8 --> N8_5["8.5 Binding, immunoassay and interaction analysis"]
-    N8_5 --> N8_5_1["8.5.1 ELISA and sandwich immunoassays"]
-    N8_5 --> N8_5_2["8.5.2 Multiplex bead and array immunoassays"]
-    N8_5 --> N8_5_3["8.5.3 Lateral flow and rapid tests"]
-    N8_5 --> N8_5_4["8.5.4 Label-free binding kinetics (SPR, BLI)"]
-    N8_5 --> N8_5_5["8.5.5 Thermodynamic and stability assays (ITC, thermal shift)"]
-    N8 --> N8_6["8.6 Cell-based and functional assays"]
-    N8_6 --> N8_6_1["8.6.1 Viability, proliferation and cytotoxicity"]
-    N8_6 --> N8_6_2["8.6.2 Reporter and signaling pathway assays"]
-    N8_6 --> N8_6_3["8.6.3 Enzyme activity and kinetics"]
-    N8_6 --> N8_6_4["8.6.4 Migration, invasion and adhesion"]
-    N8_6 --> N8_6_5["8.6.5 Differentiation, potency and colony-forming assays"]
-    N8_6 --> N8_6_6["8.6.6 Dose response and drug combination studies"]
-    N8_6 --> N8_6_7["8.6.7 Pooled and arrayed screening campaigns"]
-    N8 --> N8_7["8.7 Cytometry acquisition"]
-    N8_7 --> N8_7_1["8.7.1 Conventional and spectral flow acquisition"]
-    N8_7 --> N8_7_2["8.7.2 Cell sorting and single-cell deposition"]
-    N8_7 --> N8_7_3["8.7.3 Mass cytometry acquisition"]
-    N8 --> N8_8["8.8 Imaging acquisition"]
-    N8_8 --> N8_8_1["8.8.1 Widefield, confocal and super-resolution microscopy"]
-    N8_8 --> N8_8_2["8.8.2 Live-cell and time-lapse imaging"]
-    N8_8 --> N8_8_3["8.8.3 High-content and automated imaging"]
-    N8_8 --> N8_8_4["8.8.4 Electron microscopy and tomography acquisition"]
-    N8_8 --> N8_8_5["8.8.5 Whole-slide scanning and digital pathology capture"]
-    N8_8 --> N8_8_6["8.8.6 In vivo and preclinical imaging"]
-    N8 --> N8_9["8.9 Structural and biophysical characterization"]
-    N8_9 --> N8_9_1["8.9.1 X-ray diffraction data collection"]
-    N8_9 --> N8_9_2["8.9.2 Cryo-EM data collection"]
-    N8_9 --> N8_9_3["8.9.3 NMR spectroscopy"]
-    N8_9 --> N8_9_4["8.9.4 Circular dichroism and optical spectroscopy"]
-    N8_9 --> N8_9_5["8.9.5 Light scattering, analytical ultracentrifugation, calorimetry"]
-    N8 --> N8_10["8.10 Electrophysiology and biosensing"]
-    N8_10 --> N8_10_1["8.10.1 Manual and automated patch clamp"]
-    N8_10 --> N8_10_2["8.10.2 Multi-electrode array and impedance"]
-    N8_10 --> N8_10_3["8.10.3 Electrochemical and optical biosensors"]
-    N8 --> N8_11["8.11 Microbial and organism phenotyping"]
-    N8_11 --> N8_11_1["8.11.1 Enumeration and viability plating"]
-    N8_11 --> N8_11_2["8.11.2 Growth kinetics and fitness assays"]
-    N8_11 --> N8_11_3["8.11.3 Antimicrobial susceptibility testing"]
-    N8_11 --> N8_11_4["8.11.4 Identification and biochemical panels"]
-    N8_11 --> N8_11_5["8.11.5 Morphometric and behavioral phenotyping"]
-    N8 --> N8_12["8.12 In vivo study execution and readout"]
-    N8_12 --> N8_12_1["8.12.1 Dosing and administration"]
-    N8_12 --> N8_12_2["8.12.2 In-life sampling and pharmacokinetics"]
-    N8_12 --> N8_12_3["8.12.3 Physiological and behavioral monitoring"]
-    N8_12 --> N8_12_4["8.12.4 Model induction and challenge studies"]
-    N8_12 --> N8_12_5["8.12.5 Terminal procedures and tissue collection"]
-    class N8 domain;
-    classDef domain fill:#e4eee9,stroke:#2f5d50,stroke-width:2px;
-```
+| # | Domain | Output it produces | Branches | Workflows |
+|---|---|---|---|---|
+| 1 | **Reagents and materials prepared** | A ready-to-use input for other work | 6 | 23 |
+| 2 | **Specimens acquired, processed and banked** | A biological specimen that is ready to use or ready to store | 5 | 21 |
+| 3 | **Biomolecules isolated and purified** | A purified, naturally occurring biomolecule or particle | 5 | 20 |
+| 4 | **Biomolecules and constructs built** | A biomolecule that did not exist before this work | 6 | 36 |
+| 5 | **Living systems cultured and maintained** | A living, propagated biological system | 7 | 39 |
+| 6 | **Living systems engineered** | A biological system whose genome or composition has been changed | 5 | 26 |
+| 7 | **Specimens prepared for analysis** | A specimen in the exact physical form an instrument requires | 8 | 43 |
+| 8 | **Measurements and characterization** | Data about a sample, system or organism | 12 | 56 |
 
 <!-- END BRANCHES -->
 
-## Where the hard cases land
+The domains run in order from inputs to answers. Each opens into branches and individual workflows in **[TAXONOMY.md](TAXONOMY.md)** and in the [interactive map](https://cykim5.github.io/bio-workflow-taxonomy/).
 
-The three techniques that break most taxonomies each land cleanly, because the rule asks what the work produces rather than what it uses.
+## The filters
 
-| Technique | Where it goes | Why |
-|---|---|---|
-| PCR to make DNA for a later step | 4.1.1.1 Fragment generation | Output is DNA |
-| qPCR to produce a number | 8.2.1 qPCR and RT-qPCR | Output is data |
-| Gel run to recover a band | 3.1.5 Cleanup, size selection and gel recovery | Output is DNA |
-| Gel run to report a size | 8.4.1 Agarose and polyacrylamide gel analysis | Output is data |
-| Centrifuging, mixing, incubating | Not in the tree | Single operations are steps, not workflows |
+Everything that legitimately overlaps is a tag, not a branch. A workflow can carry any number from each.
 
-## Files
+| Filter | Examples |
+|---|---|
+| Research area | Immunology, genomics, neuroscience, cancer biology, 19 in total |
+| Function | Discovery, assay development, screening, process development, QC, manufacturing |
+| Setting | Academic lab, core facility, biotech R&D, CRO, clinical lab, manufacturing site |
+| Scale | Single sample, plate-based, high throughput, pilot, manufacturing |
+| Regulatory regime | Research use only, GLP, CLIA, GMP, biosafety level |
+| Unit operation | Liquid transfer, separation, thermal cycling, detection, object manipulation |
+| Material acted on | Nucleic acid, protein, cell, tissue, organism, data |
+
+The last two are what the downstream assessment scores. **Automation feasibility attaches to unit operations, not to workflows**, which is why a workflow usually earns a mixed verdict rather than a yes or no: the liquid transfers automate, the object handling does not.
+
+## Repository
 
 | File | What it is |
 |---|---|
-| [`TAXONOMY.md`](TAXONOMY.md) | Source of truth: the splitting rule, the full tree, and the lenses |
-| [`lenses.yaml`](lenses.yaml) | Research area and material tags, keyed by node id |
-| [`build.py`](build.py) | Generates `docs/taxonomy.json` and `diagram.mmd` from the two files above |
-| [`docs/`](docs/) | The interactive map, published with GitHub Pages |
-| [`docs/taxonomy.json`](docs/taxonomy.json) | The tree as data, for loading into other tools |
-
-Rebuild after editing the tree or the tags:
+| [`TAXONOMY.md`](TAXONOMY.md) | Source of truth: the rule, the full tree, the filters |
+| [`lenses.yaml`](lenses.yaml) | Filter tags, keyed by node id |
+| [`build.py`](build.py) | Regenerates the data, the diagram and this README's map section |
+| [`docs/`](docs/) | The interactive map |
+| [`docs/taxonomy.json`](docs/taxonomy.json) | The map as data, for loading into other tools |
 
 ```bash
-python3 build.py
+python3 build.py                              # rebuild after editing the tree
+python3 -m http.server --directory docs 8000  # preview the interactive map
 ```
 
-Preview the page locally:
+## Status
 
-```bash
-python3 -m http.server --directory docs 8000
-```
+A synthesis, not a published standard. It reconciles how method ontologies, protocol publishers, equipment vendors, university core facilities and industry R&D functions structure lab work, but no existing taxonomy covers wet-lab workflows as a whole, so there is nothing to validate it against directly.
 
-## Status and limitations
+Known weaknesses:
 
-This is a synthesis, not a published standard. It draws on how formal ontologies (OBI, EFO, BAO, MeSH), protocol publishers, automation vendors, university departments and core facilities, and industry R&D organizations structure lab work, but no existing taxonomy covers wet-lab workflows as a whole, so there is nothing to validate it against directly.
+- **Domain 8 is the widest.** Twelve branches spanning a plate reader and a cryo-EM session. "Data" is a coarser output than "purified protein."
+- **Domains 7 and 8 share a soft seam.** Staining a slide and imaging it feel like one activity to the person doing them.
+- **Depth is uneven.** Nucleic acid work reaches four levels because that is where documented protocols concentrate, not because it matters more.
+- **The tie-breaks are reasoned, not cited.** Only the top-level split has ontology precedent.
 
-Known weaknesses, stated plainly:
-
-- **Domain 8 is overloaded.** Twelve children spanning a plate reader and a cryo-EM session. "Data" is a coarser output category than "purified protein."
-- **Domains 7 and 8 have a soft seam.** Staining a slide and imaging it feel like one activity to the person doing them.
-- **Depth is uneven.** Nucleic acid work reaches four levels because that is where the most documented protocols exist, not because it matters more. Carbohydrate work, biosensing and therapeutic cell engineering are thin.
-- **The tie-break rules are reasoned, not cited.** Only the top-level output split has ontology precedent.
-
-**The test that would settle it:** assign several hundred real published protocols to leaves. Three numbers decide whether the structure works, namely the share landing in exactly one leaf, the share fitting two or more (rule violations), and the share fitting none (missing branches). Agreement between two independent people assigning the same protocols tests whether the rule is teachable, which is the real bar for a taxonomy meant for others to use.
+**The test that would settle it:** assign several hundred published protocols to leaves and measure three things, namely the share landing in exactly one leaf, the share fitting two or more (overlap), and the share fitting none (gaps). Agreement between two independent people assigning the same protocols tests whether the rule is teachable, which is the real bar for a structure meant for others to use.
 
 ## Scope
 
 Wet-lab work only, meaning anything performed on physical biological material.
 
-Deliberately excluded: bioinformatics and computational biology, biostatistics, modeling and simulation, structure prediction, image analysis, cheminformatics, laboratory information systems, database curation, and clinical patient-facing procedures. A complete picture of a modern lab would add these as a parallel tree rather than as branches inside this one.
+Deliberately excluded: bioinformatics and computational biology, biostatistics, modeling and simulation, structure prediction, image analysis, cheminformatics, laboratory information systems, and clinical patient-facing procedures. A complete picture of a modern lab would add these as a parallel map rather than as branches inside this one.
