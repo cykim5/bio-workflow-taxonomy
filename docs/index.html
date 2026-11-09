@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biological Workflow Map</title>
+  <meta name="description" content="A structural map of biological laboratory work, organized so that every workflow has exactly one place.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">A map of the field</p>
+      <h1>Biological laboratory work, with one place for everything</h1>
+      <p class="lede">
+        Every workflow at a wet-lab bench, filed by <strong>the kind of thing it exists to produce</strong>.
+        Research field, technique and instrument all overlap, so they are filters here rather than branches.
+        Output does not overlap, which is what lets each workflow sit in exactly one place.
+      </p>
+      <dl class="stats" id="stats"></dl>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="wrap controls-inner">
+      <div class="search-wrap">
+        <input type="search" id="search" placeholder="Search workflows, for example gel, CRISPR, organoid" aria-label="Search workflows" autocomplete="off">
+      </div>
+      <div class="selects">
+        <label>Research area
+          <select id="area" aria-label="Filter by research area"><option value="">Any</option></select>
+        </label>
+        <label>Material
+          <select id="material" aria-label="Filter by material"><option value="">Any</option></select>
+        </label>
+      </div>
+      <div class="buttons">
+        <button type="button" id="expand" class="btn">Expand all</button>
+        <button type="button" id="collapse" class="btn">Collapse all</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <p class="result-line" id="resultLine" role="status"></p>
+    <div id="tree" class="tree"></div>
+    <p class="empty" id="empty" hidden>Nothing matches those filters. Try a broader search.</p>
+  </main>
+
+  <footer class="wrap footer">
+    <p>
+      The structure, the splitting rule and a critical review are in
+      <a href="https://github.com/cykim5/bio-workflow-taxonomy/blob/main/TAXONOMY.md">TAXONOMY.md</a>.
+      This map is a synthesis, not a published standard, and has not been validated against a protocol corpus.
+    </p>
+    <p>Wet-lab work only. Computational biology is deliberately excluded.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

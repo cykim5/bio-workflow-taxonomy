@@ -1,0 +1,93 @@
+# Lens tags for the taxonomy.
+#
+# Structure comes from TAXONOMY.md. This file adds the overlapping tags.
+# Keys are node ids. Tags are inherited by children unless a child overrides.
+#
+# areas:     research areas that routinely run this work
+# materials: what the work physically acts on
+
+"1":
+  areas: [all]
+  materials: [chemical, nucleic-acid, protein, cell]
+"1.1": {areas: [all], materials: [chemical]}
+"1.2": {areas: [cell-biology, microbiology, plant-biology, stem-cell, bioengineering], materials: [chemical, cell]}
+"1.3": {areas: [molecular-biology, genomics, biochemistry], materials: [chemical, nucleic-acid, protein]}
+"1.4": {areas: [pharmacology, cancer-biology, bioengineering], materials: [chemical]}
+"1.5": {areas: [biochemistry, molecular-biology, synthetic-biology], materials: [nucleic-acid, protein, chemical]}
+"1.6": {areas: [all], materials: [chemical]}
+
+"2":
+  areas: [all]
+  materials: [tissue, cell, organism]
+"2.1": {areas: [immunology, cancer-biology, microbiology, ecology, plant-biology], materials: [tissue, organism, cell]}
+"2.2": {areas: [immunology, cancer-biology, cell-biology, neuroscience], materials: [tissue, cell]}
+"2.3": {areas: [all], materials: [tissue, cell, nucleic-acid]}
+"2.4": {areas: [all], materials: [cell, nucleic-acid, protein]}
+"2.5": {areas: [all], materials: [cell, tissue, nucleic-acid]}
+
+"3":
+  areas: [molecular-biology, genomics, biochemistry]
+  materials: [nucleic-acid, protein, lipid, metabolite, carbohydrate]
+"3.1": {areas: [molecular-biology, genomics, microbiology, ecology, cancer-biology], materials: [nucleic-acid]}
+"3.2": {areas: [biochemistry, structural-biology, cell-biology, immunology], materials: [protein]}
+"3.3": {areas: [biochemistry, pharmacology, ecology], materials: [lipid, metabolite]}
+"3.4": {areas: [biochemistry, immunology], materials: [carbohydrate]}
+"3.5": {areas: [cell-biology, structural-biology, virology, neuroscience], materials: [protein, nucleic-acid, cell]}
+
+"4":
+  areas: [molecular-biology, genomics, synthetic-biology, biochemistry]
+  materials: [nucleic-acid, protein, chemical]
+"4.1": {areas: [molecular-biology, synthetic-biology, genetics], materials: [nucleic-acid]}
+"4.2": {areas: [genomics, cancer-biology, ecology, developmental-biology], materials: [nucleic-acid]}
+"4.3": {areas: [biochemistry, structural-biology, bioengineering], materials: [protein]}
+"4.4": {areas: [immunology, bioengineering, cancer-biology], materials: [protein, cell]}
+"4.5": {areas: [biochemistry, pharmacology, bioengineering], materials: [protein, nucleic-acid, chemical]}
+"4.6": {areas: [bioengineering, pharmacology], materials: [lipid, chemical, protein]}
+
+"5":
+  areas: [cell-biology, microbiology, stem-cell, plant-biology, virology]
+  materials: [cell, organism, tissue]
+"5.1": {areas: [microbiology, synthetic-biology, ecology], materials: [cell]}
+"5.2": {areas: [cell-biology, cancer-biology, immunology, bioengineering], materials: [cell]}
+"5.3": {areas: [stem-cell, developmental-biology, neuroscience, pharmacology], materials: [cell, tissue]}
+"5.4": {areas: [plant-biology, ecology, synthetic-biology], materials: [organism, tissue]}
+"5.5": {areas: [virology, immunology, bioengineering], materials: [cell]}
+"5.6": {areas: [neuroscience, developmental-biology, genetics, pharmacology, ecology], materials: [organism]}
+"5.7": {areas: [bioengineering, microbiology], materials: [cell, protein]}
+
+"6":
+  areas: [genetics, synthetic-biology, cell-biology, bioengineering]
+  materials: [cell, organism, nucleic-acid]
+"6.1": {areas: [microbiology, synthetic-biology, genetics], materials: [cell, nucleic-acid]}
+"6.2": {areas: [cell-biology, genetics, cancer-biology, stem-cell], materials: [cell, nucleic-acid]}
+"6.3": {areas: [genetics, developmental-biology, plant-biology, neuroscience], materials: [organism]}
+"6.4": {areas: [immunology, cancer-biology, bioengineering], materials: [cell]}
+"6.5": {areas: [synthetic-biology, bioengineering, microbiology], materials: [cell, nucleic-acid, protein]}
+
+"7":
+  areas: [cell-biology, structural-biology, cancer-biology, neuroscience]
+  materials: [tissue, cell, protein]
+"7.1": {areas: [cancer-biology, developmental-biology, neuroscience, immunology], materials: [tissue]}
+"7.2": {areas: [cell-biology, neuroscience, developmental-biology], materials: [cell, tissue]}
+"7.3": {areas: [cell-biology, structural-biology, virology, neuroscience], materials: [cell, tissue]}
+"7.4": {areas: [structural-biology, biochemistry], materials: [protein, nucleic-acid]}
+"7.5": {areas: [immunology, cancer-biology, stem-cell], materials: [cell]}
+"7.6": {areas: [biochemistry, cancer-biology, pharmacology], materials: [protein, metabolite, lipid]}
+"7.7": {areas: [molecular-biology, biochemistry, cell-biology], materials: [nucleic-acid, protein]}
+"7.8": {areas: [cancer-biology, neuroscience, developmental-biology], materials: [tissue]}
+
+"8":
+  areas: [all]
+  materials: [data]
+"8.1": {areas: [all], materials: [nucleic-acid, protein, cell, data]}
+"8.2": {areas: [molecular-biology, microbiology, virology, genetics], materials: [nucleic-acid, data]}
+"8.3": {areas: [genomics, genetics, ecology, cancer-biology], materials: [nucleic-acid, data]}
+"8.4": {areas: [biochemistry, molecular-biology, cell-biology, pharmacology], materials: [protein, nucleic-acid, metabolite, data]}
+"8.5": {areas: [immunology, biochemistry, pharmacology, cancer-biology], materials: [protein, data]}
+"8.6": {areas: [cell-biology, pharmacology, cancer-biology, stem-cell, bioengineering], materials: [cell, data]}
+"8.7": {areas: [immunology, cancer-biology, stem-cell, cell-biology], materials: [cell, data]}
+"8.8": {areas: [cell-biology, neuroscience, developmental-biology, cancer-biology], materials: [cell, tissue, data]}
+"8.9": {areas: [structural-biology, biochemistry], materials: [protein, nucleic-acid, data]}
+"8.10": {areas: [neuroscience, pharmacology, bioengineering], materials: [cell, tissue, data]}
+"8.11": {areas: [microbiology, ecology, genetics], materials: [cell, organism, data]}
+"8.12": {areas: [pharmacology, neuroscience, immunology, cancer-biology], materials: [organism, data]}

@@ -1,0 +1,5153 @@
+{
+  "title": "Biological laboratory work",
+  "rule": "Every workflow is filed under the kind of thing it exists to produce.",
+  "areaLabels": {
+    "all": "All areas",
+    "biochemistry": "Biochemistry",
+    "structural-biology": "Structural biology",
+    "molecular-biology": "Molecular biology",
+    "cell-biology": "Cell biology",
+    "developmental-biology": "Developmental biology",
+    "stem-cell": "Stem cell biology",
+    "genetics": "Genetics",
+    "genomics": "Genomics",
+    "neuroscience": "Neuroscience",
+    "immunology": "Immunology",
+    "microbiology": "Microbiology",
+    "virology": "Virology",
+    "cancer-biology": "Cancer biology",
+    "plant-biology": "Plant biology",
+    "ecology": "Ecology and environment",
+    "synthetic-biology": "Synthetic biology",
+    "pharmacology": "Pharmacology and toxicology",
+    "bioengineering": "Bioengineering"
+  },
+  "materialLabels": {
+    "nucleic-acid": "Nucleic acid",
+    "protein": "Protein",
+    "lipid": "Lipid",
+    "metabolite": "Metabolite",
+    "carbohydrate": "Carbohydrate",
+    "cell": "Cell",
+    "tissue": "Tissue",
+    "organism": "Organism",
+    "chemical": "Chemical compound",
+    "data": "Data"
+  },
+  "stats": {
+    "domains": 8,
+    "nodes": 329,
+    "leaves": 264,
+    "maxDepth": 4
+  },
+  "tree": [
+    {
+      "id": "1",
+      "title": "Reagents and materials prepared",
+      "depth": 1,
+      "children": [
+        {
+          "id": "1.1",
+          "title": "Solutions and buffers",
+          "depth": 2,
+          "children": [
+            {
+              "id": "1.1.1",
+              "title": "Stock preparation (weighing, dissolving, sterilization)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.1.2",
+              "title": "Working dilution and aliquoting",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.1.3",
+              "title": "pH, ionic strength and osmolality adjustment",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.1.4",
+              "title": "Solution QC and shelf-life management",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            }
+          ],
+          "areas": [
+            "all"
+          ],
+          "materials": [
+            "chemical"
+          ]
+        },
+        {
+          "id": "1.2",
+          "title": "Culture media and growth substrates",
+          "depth": 2,
+          "children": [
+            {
+              "id": "1.2.1",
+              "title": "Microbial media (broth, agar, selective, differential)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "microbiology",
+                "plant-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical",
+                "cell"
+              ]
+            },
+            {
+              "id": "1.2.2",
+              "title": "Mammalian and insect media with supplements and sera",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "microbiology",
+                "plant-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical",
+                "cell"
+              ]
+            },
+            {
+              "id": "1.2.3",
+              "title": "Plant tissue culture media and hormone series",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "microbiology",
+                "plant-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical",
+                "cell"
+              ]
+            },
+            {
+              "id": "1.2.4",
+              "title": "Matrices, scaffolds and coatings for 3D culture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "microbiology",
+                "plant-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical",
+                "cell"
+              ]
+            },
+            {
+              "id": "1.2.5",
+              "title": "Organism diets and bedding substrates",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "microbiology",
+                "plant-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical",
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "cell-biology",
+            "microbiology",
+            "plant-biology",
+            "stem-cell",
+            "bioengineering"
+          ],
+          "materials": [
+            "chemical",
+            "cell"
+          ]
+        },
+        {
+          "id": "1.3",
+          "title": "Reaction mixes and assay-ready plates",
+          "depth": 2,
+          "children": [
+            {
+              "id": "1.3.1",
+              "title": "Enzyme and master mix assembly",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "biochemistry"
+              ],
+              "materials": [
+                "chemical",
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "1.3.2",
+              "title": "Primer, probe and oligo working plates",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "biochemistry"
+              ],
+              "materials": [
+                "chemical",
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "1.3.3",
+              "title": "Assay plate stamping and reagent pre-loading",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "biochemistry"
+              ],
+              "materials": [
+                "chemical",
+                "nucleic-acid",
+                "protein"
+              ]
+            }
+          ],
+          "areas": [
+            "molecular-biology",
+            "genomics",
+            "biochemistry"
+          ],
+          "materials": [
+            "chemical",
+            "nucleic-acid",
+            "protein"
+          ]
+        },
+        {
+          "id": "1.4",
+          "title": "Compound and library management",
+          "depth": 2,
+          "children": [
+            {
+              "id": "1.4.1",
+              "title": "Solubilization and stock plating",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "cancer-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.4.2",
+              "title": "Dose and dilution series construction",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "cancer-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.4.3",
+              "title": "Library replication and cherry picking",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "cancer-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.4.4",
+              "title": "Storage, freeze-thaw tracking and integrity checks",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "cancer-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            }
+          ],
+          "areas": [
+            "pharmacology",
+            "cancer-biology",
+            "bioengineering"
+          ],
+          "materials": [
+            "chemical"
+          ]
+        },
+        {
+          "id": "1.5",
+          "title": "Chemically synthesized reagents",
+          "depth": 2,
+          "children": [
+            {
+              "id": "1.5.1",
+              "title": "Oligonucleotide synthesis and purification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "synthetic-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein",
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.5.2",
+              "title": "Peptide synthesis and purification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "synthetic-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein",
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.5.3",
+              "title": "Labeled and modified reagents (fluorophore, biotin, isotope)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "synthetic-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein",
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.5.4",
+              "title": "Radiolabeled reagent preparation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "synthetic-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein",
+                "chemical"
+              ]
+            }
+          ],
+          "areas": [
+            "biochemistry",
+            "molecular-biology",
+            "synthetic-biology"
+          ],
+          "materials": [
+            "nucleic-acid",
+            "protein",
+            "chemical"
+          ]
+        },
+        {
+          "id": "1.6",
+          "title": "Labware, containment and consumable preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "1.6.1",
+              "title": "Washing, autoclaving and depyrogenation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.6.2",
+              "title": "Sterile field and aseptic workspace setup",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            },
+            {
+              "id": "1.6.3",
+              "title": "Containment, decontamination and waste handling",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "chemical"
+              ]
+            }
+          ],
+          "areas": [
+            "all"
+          ],
+          "materials": [
+            "chemical"
+          ]
+        }
+      ],
+      "areas": [
+        "all"
+      ],
+      "materials": [
+        "chemical",
+        "nucleic-acid",
+        "protein",
+        "cell"
+      ],
+      "output": "a ready-to-use input for other work"
+    },
+    {
+      "id": "2",
+      "title": "Specimens acquired, processed and banked",
+      "depth": 1,
+      "children": [
+        {
+          "id": "2.1",
+          "title": "Acquisition and accessioning",
+          "depth": 2,
+          "children": [
+            {
+              "id": "2.1.1",
+              "title": "Human subject and clinical specimen collection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "microbiology",
+                "ecology",
+                "plant-biology"
+              ],
+              "materials": [
+                "tissue",
+                "organism",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.1.2",
+              "title": "Animal specimen collection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "microbiology",
+                "ecology",
+                "plant-biology"
+              ],
+              "materials": [
+                "tissue",
+                "organism",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.1.3",
+              "title": "Plant, soil and agricultural sampling",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "microbiology",
+                "ecology",
+                "plant-biology"
+              ],
+              "materials": [
+                "tissue",
+                "organism",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.1.4",
+              "title": "Environmental and field sampling (water, air, sediment, swabs)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "microbiology",
+                "ecology",
+                "plant-biology"
+              ],
+              "materials": [
+                "tissue",
+                "organism",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.1.5",
+              "title": "Microbial and clinical isolate recovery",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "microbiology",
+                "ecology",
+                "plant-biology"
+              ],
+              "materials": [
+                "tissue",
+                "organism",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.1.6",
+              "title": "Labeling, chain of custody and consent documentation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "microbiology",
+                "ecology",
+                "plant-biology"
+              ],
+              "materials": [
+                "tissue",
+                "organism",
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "immunology",
+            "cancer-biology",
+            "microbiology",
+            "ecology",
+            "plant-biology"
+          ],
+          "materials": [
+            "tissue",
+            "organism",
+            "cell"
+          ]
+        },
+        {
+          "id": "2.2",
+          "title": "Primary processing",
+          "depth": 2,
+          "children": [
+            {
+              "id": "2.2.1",
+              "title": "Blood and body fluid fractionation (plasma, serum, PBMC, CSF)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "cell-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "tissue",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.2.2",
+              "title": "Solid tissue dissection, grossing and trimming",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "cell-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "tissue",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.2.3",
+              "title": "Tissue dissociation to cells or nuclei",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "cell-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "tissue",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.2.4",
+              "title": "Cell lysis and homogenization",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "cell-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "tissue",
+                "cell"
+              ]
+            },
+            {
+              "id": "2.2.5",
+              "title": "Field concentration and filtration of dilute samples",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "cell-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "tissue",
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "immunology",
+            "cancer-biology",
+            "cell-biology",
+            "neuroscience"
+          ],
+          "materials": [
+            "tissue",
+            "cell"
+          ]
+        },
+        {
+          "id": "2.3",
+          "title": "Stabilization and preservation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "2.3.1",
+              "title": "Chemical fixation and preservative addition",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "tissue",
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "2.3.2",
+              "title": "Snap freezing and cryopreservation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "tissue",
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "2.3.3",
+              "title": "Drying, lyophilization and card-based storage",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "tissue",
+                "cell",
+                "nucleic-acid"
+              ]
+            }
+          ],
+          "areas": [
+            "all"
+          ],
+          "materials": [
+            "tissue",
+            "cell",
+            "nucleic-acid"
+          ]
+        },
+        {
+          "id": "2.4",
+          "title": "Formatting and distribution",
+          "depth": 2,
+          "children": [
+            {
+              "id": "2.4.1",
+              "title": "Aliquoting and tube-to-plate transfer",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "2.4.2",
+              "title": "Plate reformatting and consolidation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "2.4.3",
+              "title": "Input normalization by concentration or volume",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid",
+                "protein"
+              ]
+            }
+          ],
+          "areas": [
+            "all"
+          ],
+          "materials": [
+            "cell",
+            "nucleic-acid",
+            "protein"
+          ]
+        },
+        {
+          "id": "2.5",
+          "title": "Biobanking and inventory",
+          "depth": 2,
+          "children": [
+            {
+              "id": "2.5.1",
+              "title": "Controlled-rate freezing and vapor-phase storage",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "2.5.2",
+              "title": "Inventory systems, barcoding and location tracking",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "2.5.3",
+              "title": "Retrieval, thaw and re-banking",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "2.5.4",
+              "title": "Specimen integrity QC gates",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "nucleic-acid"
+              ]
+            }
+          ],
+          "areas": [
+            "all"
+          ],
+          "materials": [
+            "cell",
+            "tissue",
+            "nucleic-acid"
+          ]
+        }
+      ],
+      "areas": [
+        "all"
+      ],
+      "materials": [
+        "tissue",
+        "cell",
+        "organism"
+      ],
+      "output": "a biological specimen that is ready to use or ready to store"
+    },
+    {
+      "id": "3",
+      "title": "Biomolecules isolated and purified",
+      "depth": 1,
+      "children": [
+        {
+          "id": "3.1",
+          "title": "Nucleic acid isolation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "3.1.1",
+              "title": "Genomic and total DNA",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "microbiology",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "3.1.2",
+              "title": "RNA (total, mRNA, small RNA, nascent)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "microbiology",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "3.1.3",
+              "title": "Plasmid and episomal DNA",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "microbiology",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "3.1.4",
+              "title": "Low-input and cell-free (cfDNA, ctDNA, single-cell, ancient, eDNA)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "microbiology",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "3.1.5",
+              "title": "Cleanup, size selection and gel recovery",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "microbiology",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "3.1.6",
+              "title": "Elution, concentration and buffer conditioning",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "genomics",
+                "microbiology",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            }
+          ],
+          "areas": [
+            "molecular-biology",
+            "genomics",
+            "microbiology",
+            "ecology",
+            "cancer-biology"
+          ],
+          "materials": [
+            "nucleic-acid"
+          ]
+        },
+        {
+          "id": "3.2",
+          "title": "Protein isolation and purification",
+          "depth": 2,
+          "children": [
+            {
+              "id": "3.2.1",
+              "title": "Extraction, clarification and solubilization",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "cell-biology",
+                "immunology"
+              ],
+              "materials": [
+                "protein"
+              ]
+            },
+            {
+              "id": "3.2.2",
+              "title": "Affinity capture (tag, Protein A, custom ligand)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "cell-biology",
+                "immunology"
+              ],
+              "materials": [
+                "protein"
+              ]
+            },
+            {
+              "id": "3.2.3",
+              "title": "Chromatographic separation (ion exchange, hydrophobic, size exclusion)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "cell-biology",
+                "immunology"
+              ],
+              "materials": [
+                "protein"
+              ]
+            },
+            {
+              "id": "3.2.4",
+              "title": "Precipitation and phase separation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "cell-biology",
+                "immunology"
+              ],
+              "materials": [
+                "protein"
+              ]
+            },
+            {
+              "id": "3.2.5",
+              "title": "Buffer exchange, concentration and polishing",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "cell-biology",
+                "immunology"
+              ],
+              "materials": [
+                "protein"
+              ]
+            },
+            {
+              "id": "3.2.6",
+              "title": "Immunoprecipitation and interaction pulldown",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "cell-biology",
+                "immunology"
+              ],
+              "materials": [
+                "protein"
+              ]
+            }
+          ],
+          "areas": [
+            "biochemistry",
+            "structural-biology",
+            "cell-biology",
+            "immunology"
+          ],
+          "materials": [
+            "protein"
+          ]
+        },
+        {
+          "id": "3.3",
+          "title": "Lipid, metabolite and small-molecule extraction",
+          "depth": 2,
+          "children": [
+            {
+              "id": "3.3.1",
+              "title": "Quenching and extraction",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "lipid",
+                "metabolite"
+              ]
+            },
+            {
+              "id": "3.3.2",
+              "title": "Liquid-liquid and solid-phase cleanup",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "lipid",
+                "metabolite"
+              ]
+            },
+            {
+              "id": "3.3.3",
+              "title": "Fractionation and class enrichment",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "lipid",
+                "metabolite"
+              ]
+            }
+          ],
+          "areas": [
+            "biochemistry",
+            "pharmacology",
+            "ecology"
+          ],
+          "materials": [
+            "lipid",
+            "metabolite"
+          ]
+        },
+        {
+          "id": "3.4",
+          "title": "Carbohydrate, glycan and other biopolymer isolation",
+          "depth": 2,
+          "children": [],
+          "areas": [
+            "biochemistry",
+            "immunology"
+          ],
+          "materials": [
+            "carbohydrate"
+          ]
+        },
+        {
+          "id": "3.5",
+          "title": "Complexes, organelles and particles",
+          "depth": 2,
+          "children": [
+            {
+              "id": "3.5.1",
+              "title": "Subcellular fractionation (nuclei, mitochondria, membranes)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "cell"
+              ]
+            },
+            {
+              "id": "3.5.2",
+              "title": "Chromatin, ribosome and ribonucleoprotein isolation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "cell"
+              ]
+            },
+            {
+              "id": "3.5.3",
+              "title": "Extracellular vesicle isolation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "cell"
+              ]
+            },
+            {
+              "id": "3.5.4",
+              "title": "Virus and virus-like particle purification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "cell-biology",
+            "structural-biology",
+            "virology",
+            "neuroscience"
+          ],
+          "materials": [
+            "protein",
+            "nucleic-acid",
+            "cell"
+          ]
+        }
+      ],
+      "areas": [
+        "molecular-biology",
+        "genomics",
+        "biochemistry"
+      ],
+      "materials": [
+        "nucleic-acid",
+        "protein",
+        "lipid",
+        "metabolite",
+        "carbohydrate"
+      ],
+      "output": "a purified, naturally occurring biomolecule or particle"
+    },
+    {
+      "id": "4",
+      "title": "Biomolecules and constructs built",
+      "depth": 1,
+      "children": [
+        {
+          "id": "4.1",
+          "title": "Nucleic acid construction",
+          "depth": 2,
+          "children": [
+            {
+              "id": "4.1.1",
+              "title": "Fragment generation",
+              "depth": 3,
+              "children": [
+                {
+                  "id": "4.1.1.1",
+                  "title": "PCR amplification (preparative)",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "molecular-biology",
+                    "synthetic-biology",
+                    "genetics"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.1.1.2",
+                  "title": "Restriction digestion",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "molecular-biology",
+                    "synthetic-biology",
+                    "genetics"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.1.1.3",
+                  "title": "De novo gene and fragment synthesis",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "molecular-biology",
+                    "synthetic-biology",
+                    "genetics"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                }
+              ],
+              "areas": [
+                "molecular-biology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.1.2",
+              "title": "Assembly (ligation, Gibson, Golden Gate, recombineering, gateway)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.1.3",
+              "title": "Propagation in host and construct recovery",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.1.4",
+              "title": "Verification (restriction mapping, sequencing, gel check)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.1.5",
+              "title": "Library construction",
+              "depth": 3,
+              "children": [
+                {
+                  "id": "4.1.5.1",
+                  "title": "Site-directed and saturation mutagenesis",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "molecular-biology",
+                    "synthetic-biology",
+                    "genetics"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.1.5.2",
+                  "title": "Pooled guide, shRNA and variant libraries",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "molecular-biology",
+                    "synthetic-biology",
+                    "genetics"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.1.5.3",
+                  "title": "Barcoded and combinatorial libraries",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "molecular-biology",
+                    "synthetic-biology",
+                    "genetics"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                }
+              ],
+              "areas": [
+                "molecular-biology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            }
+          ],
+          "areas": [
+            "molecular-biology",
+            "synthetic-biology",
+            "genetics"
+          ],
+          "materials": [
+            "nucleic-acid"
+          ]
+        },
+        {
+          "id": "4.2",
+          "title": "Sequencing library preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "4.2.1",
+              "title": "Fragmentation, end repair and adapter ligation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "cancer-biology",
+                "ecology",
+                "developmental-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.2.2",
+              "title": "Indexing amplification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "cancer-biology",
+                "ecology",
+                "developmental-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.2.3",
+              "title": "Cleanup and size selection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "cancer-biology",
+                "ecology",
+                "developmental-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.2.4",
+              "title": "Target enrichment and depletion",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "cancer-biology",
+                "ecology",
+                "developmental-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.2.5",
+              "title": "Library QC, normalization and pooling",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "cancer-biology",
+                "ecology",
+                "developmental-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "4.2.6",
+              "title": "Assay-specific variants",
+              "depth": 3,
+              "children": [
+                {
+                  "id": "4.2.6.1",
+                  "title": "Whole genome, exome and targeted panels",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "genomics",
+                    "cancer-biology",
+                    "ecology",
+                    "developmental-biology"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.2.6.2",
+                  "title": "RNA-seq and small RNA",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "genomics",
+                    "cancer-biology",
+                    "ecology",
+                    "developmental-biology"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.2.6.3",
+                  "title": "Single-cell and single-nucleus",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "genomics",
+                    "cancer-biology",
+                    "ecology",
+                    "developmental-biology"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.2.6.4",
+                  "title": "Spatial transcriptomics",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "genomics",
+                    "cancer-biology",
+                    "ecology",
+                    "developmental-biology"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.2.6.5",
+                  "title": "Epigenomics (methylation, ATAC, ChIP, Hi-C)",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "genomics",
+                    "cancer-biology",
+                    "ecology",
+                    "developmental-biology"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.2.6.6",
+                  "title": "Long-read and native-molecule",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "genomics",
+                    "cancer-biology",
+                    "ecology",
+                    "developmental-biology"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "4.2.6.7",
+                  "title": "Amplicon and metagenomic",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "genomics",
+                    "cancer-biology",
+                    "ecology",
+                    "developmental-biology"
+                  ],
+                  "materials": [
+                    "nucleic-acid"
+                  ]
+                }
+              ],
+              "areas": [
+                "genomics",
+                "cancer-biology",
+                "ecology",
+                "developmental-biology"
+              ],
+              "materials": [
+                "nucleic-acid"
+              ]
+            }
+          ],
+          "areas": [
+            "genomics",
+            "cancer-biology",
+            "ecology",
+            "developmental-biology"
+          ],
+          "materials": [
+            "nucleic-acid"
+          ]
+        },
+        {
+          "id": "4.3",
+          "title": "Recombinant protein production",
+          "depth": 2,
+          "children": [
+            {
+              "id": "4.3.1",
+              "title": "Expression construct and host selection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "protein"
+              ]
+            },
+            {
+              "id": "4.3.2",
+              "title": "Expression culture and induction",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "protein"
+              ]
+            },
+            {
+              "id": "4.3.3",
+              "title": "Cell-free expression",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "protein"
+              ]
+            },
+            {
+              "id": "4.3.4",
+              "title": "Harvest and capture (purification continues at 3.2)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "structural-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "protein"
+              ]
+            }
+          ],
+          "areas": [
+            "biochemistry",
+            "structural-biology",
+            "bioengineering"
+          ],
+          "materials": [
+            "protein"
+          ]
+        },
+        {
+          "id": "4.4",
+          "title": "Antibody and binder generation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "4.4.1",
+              "title": "Immunization and hybridoma development",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "bioengineering",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "cell"
+              ]
+            },
+            {
+              "id": "4.4.2",
+              "title": "Display selection (phage, yeast, ribosome)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "bioengineering",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "cell"
+              ]
+            },
+            {
+              "id": "4.4.3",
+              "title": "Single B cell and repertoire cloning",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "bioengineering",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "cell"
+              ]
+            },
+            {
+              "id": "4.4.4",
+              "title": "Recombinant expression and lead characterization",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "bioengineering",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "immunology",
+            "bioengineering",
+            "cancer-biology"
+          ],
+          "materials": [
+            "protein",
+            "cell"
+          ]
+        },
+        {
+          "id": "4.5",
+          "title": "Chemical modification and conjugation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "4.5.1",
+              "title": "Labeling and tagging (fluorophore, biotin, isotope)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "pharmacology",
+                "bioengineering"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "chemical"
+              ]
+            },
+            {
+              "id": "4.5.2",
+              "title": "Crosslinking and bioconjugation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "pharmacology",
+                "bioengineering"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "chemical"
+              ]
+            },
+            {
+              "id": "4.5.3",
+              "title": "Antibody-drug and polymer conjugates",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "pharmacology",
+                "bioengineering"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "chemical"
+              ]
+            },
+            {
+              "id": "4.5.4",
+              "title": "In vitro transcription and RNA modification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "pharmacology",
+                "bioengineering"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "chemical"
+              ]
+            }
+          ],
+          "areas": [
+            "biochemistry",
+            "pharmacology",
+            "bioengineering"
+          ],
+          "materials": [
+            "protein",
+            "nucleic-acid",
+            "chemical"
+          ]
+        },
+        {
+          "id": "4.6",
+          "title": "Formulated biological materials",
+          "depth": 2,
+          "children": [
+            {
+              "id": "4.6.1",
+              "title": "Lipid nanoparticle and liposome formulation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "pharmacology"
+              ],
+              "materials": [
+                "lipid",
+                "chemical",
+                "protein"
+              ]
+            },
+            {
+              "id": "4.6.2",
+              "title": "Hydrogels, scaffolds and biomaterials",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "pharmacology"
+              ],
+              "materials": [
+                "lipid",
+                "chemical",
+                "protein"
+              ]
+            },
+            {
+              "id": "4.6.3",
+              "title": "Drug product formulation and stabilization",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "pharmacology"
+              ],
+              "materials": [
+                "lipid",
+                "chemical",
+                "protein"
+              ]
+            }
+          ],
+          "areas": [
+            "bioengineering",
+            "pharmacology"
+          ],
+          "materials": [
+            "lipid",
+            "chemical",
+            "protein"
+          ]
+        }
+      ],
+      "areas": [
+        "molecular-biology",
+        "genomics",
+        "synthetic-biology",
+        "biochemistry"
+      ],
+      "materials": [
+        "nucleic-acid",
+        "protein",
+        "chemical"
+      ],
+      "output": "a biomolecule that did not exist before this work"
+    },
+    {
+      "id": "5",
+      "title": "Living systems cultured and maintained",
+      "depth": 1,
+      "children": [
+        {
+          "id": "5.1",
+          "title": "Microbial culture",
+          "depth": 2,
+          "children": [
+            {
+              "id": "5.1.1",
+              "title": "Isolation, streaking and single-colony recovery",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "ecology"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.1.2",
+              "title": "Liquid culture, growth monitoring and induction",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "ecology"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.1.3",
+              "title": "Anaerobic, fastidious and extremophile culture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "ecology"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.1.4",
+              "title": "Consortia, microbiome and enrichment culture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "ecology"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.1.5",
+              "title": "Bacteriophage propagation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "ecology"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.1.6",
+              "title": "Strain banking and revival",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "ecology"
+              ],
+              "materials": [
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "microbiology",
+            "synthetic-biology",
+            "ecology"
+          ],
+          "materials": [
+            "cell"
+          ]
+        },
+        {
+          "id": "5.2",
+          "title": "Animal cell culture",
+          "depth": 2,
+          "children": [
+            {
+              "id": "5.2.1",
+              "title": "Thaw, seeding and establishment",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "cancer-biology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.2.2",
+              "title": "Feeding, passaging and expansion",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "cancer-biology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.2.3",
+              "title": "Suspension and bioreactor-adapted culture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "cancer-biology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.2.4",
+              "title": "Primary cell isolation and culture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "cancer-biology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.2.5",
+              "title": "Co-culture and conditioned media systems",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "cancer-biology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.2.6",
+              "title": "Cell banking (master and working banks)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "cancer-biology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.2.7",
+              "title": "Identity, mycoplasma and sterility monitoring",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "cancer-biology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "cell-biology",
+            "cancer-biology",
+            "immunology",
+            "bioengineering"
+          ],
+          "materials": [
+            "cell"
+          ]
+        },
+        {
+          "id": "5.3",
+          "title": "Stem cell and advanced in vitro models",
+          "depth": 2,
+          "children": [
+            {
+              "id": "5.3.1",
+              "title": "Pluripotent stem cell derivation and maintenance",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "stem-cell",
+                "developmental-biology",
+                "neuroscience",
+                "pharmacology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "5.3.2",
+              "title": "Directed differentiation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "stem-cell",
+                "developmental-biology",
+                "neuroscience",
+                "pharmacology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "5.3.3",
+              "title": "Organoid establishment, passaging and maturation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "stem-cell",
+                "developmental-biology",
+                "neuroscience",
+                "pharmacology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "5.3.4",
+              "title": "3D, scaffold and bioprinted culture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "stem-cell",
+                "developmental-biology",
+                "neuroscience",
+                "pharmacology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "5.3.5",
+              "title": "Organ-on-chip and perfused systems",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "stem-cell",
+                "developmental-biology",
+                "neuroscience",
+                "pharmacology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "5.3.6",
+              "title": "Tissue explant and slice culture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "stem-cell",
+                "developmental-biology",
+                "neuroscience",
+                "pharmacology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            }
+          ],
+          "areas": [
+            "stem-cell",
+            "developmental-biology",
+            "neuroscience",
+            "pharmacology"
+          ],
+          "materials": [
+            "cell",
+            "tissue"
+          ]
+        },
+        {
+          "id": "5.4",
+          "title": "Plant and algal culture",
+          "depth": 2,
+          "children": [
+            {
+              "id": "5.4.1",
+              "title": "Sterile seed, explant and callus culture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "plant-biology",
+                "ecology",
+                "synthetic-biology"
+              ],
+              "materials": [
+                "organism",
+                "tissue"
+              ]
+            },
+            {
+              "id": "5.4.2",
+              "title": "Regeneration, rooting and acclimatization",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "plant-biology",
+                "ecology",
+                "synthetic-biology"
+              ],
+              "materials": [
+                "organism",
+                "tissue"
+              ]
+            },
+            {
+              "id": "5.4.3",
+              "title": "Hydroponic and controlled-environment growth",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "plant-biology",
+                "ecology",
+                "synthetic-biology"
+              ],
+              "materials": [
+                "organism",
+                "tissue"
+              ]
+            },
+            {
+              "id": "5.4.4",
+              "title": "Greenhouse and field propagation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "plant-biology",
+                "ecology",
+                "synthetic-biology"
+              ],
+              "materials": [
+                "organism",
+                "tissue"
+              ]
+            }
+          ],
+          "areas": [
+            "plant-biology",
+            "ecology",
+            "synthetic-biology"
+          ],
+          "materials": [
+            "organism",
+            "tissue"
+          ]
+        },
+        {
+          "id": "5.5",
+          "title": "Virus and vector propagation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "5.5.1",
+              "title": "Virus isolation and propagation in host cells",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "virology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.5.2",
+              "title": "Viral vector production (lentivirus, AAV, adenovirus)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "virology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.5.3",
+              "title": "Harvest, concentration and purification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "virology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "5.5.4",
+              "title": "High-containment propagation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "virology",
+                "immunology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "virology",
+            "immunology",
+            "bioengineering"
+          ],
+          "materials": [
+            "cell"
+          ]
+        },
+        {
+          "id": "5.6",
+          "title": "Whole organism husbandry",
+          "depth": 2,
+          "children": [
+            {
+              "id": "5.6.1",
+              "title": "Rodent colony management and breeding",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "developmental-biology",
+                "genetics",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "5.6.2",
+              "title": "Non-mammalian models (zebrafish, Drosophila, C. elegans, Xenopus)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "developmental-biology",
+                "genetics",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "5.6.3",
+              "title": "Insects, arthropods and vectors",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "developmental-biology",
+                "genetics",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "5.6.4",
+              "title": "Gnotobiotic and germ-free systems",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "developmental-biology",
+                "genetics",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "5.6.5",
+              "title": "Aquatic, avian and large animal systems",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "developmental-biology",
+                "genetics",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "5.6.6",
+              "title": "Health monitoring, welfare and colony QC",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "developmental-biology",
+                "genetics",
+                "pharmacology",
+                "ecology"
+              ],
+              "materials": [
+                "organism"
+              ]
+            }
+          ],
+          "areas": [
+            "neuroscience",
+            "developmental-biology",
+            "genetics",
+            "pharmacology",
+            "ecology"
+          ],
+          "materials": [
+            "organism"
+          ]
+        },
+        {
+          "id": "5.7",
+          "title": "Scaled culture and bioprocessing",
+          "depth": 2,
+          "children": [
+            {
+              "id": "5.7.1",
+              "title": "Inoculum development and seed train",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "protein"
+              ]
+            },
+            {
+              "id": "5.7.2",
+              "title": "Bioreactor operation, feeding and control",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "protein"
+              ]
+            },
+            {
+              "id": "5.7.3",
+              "title": "In-process monitoring and sampling",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "protein"
+              ]
+            },
+            {
+              "id": "5.7.4",
+              "title": "Harvest and clarification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "protein"
+              ]
+            },
+            {
+              "id": "5.7.5",
+              "title": "Downstream processing at scale",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "protein"
+              ]
+            },
+            {
+              "id": "5.7.6",
+              "title": "Formulation, fill and finish",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "protein"
+              ]
+            }
+          ],
+          "areas": [
+            "bioengineering",
+            "microbiology"
+          ],
+          "materials": [
+            "cell",
+            "protein"
+          ]
+        }
+      ],
+      "areas": [
+        "cell-biology",
+        "microbiology",
+        "stem-cell",
+        "plant-biology",
+        "virology"
+      ],
+      "materials": [
+        "cell",
+        "organism",
+        "tissue"
+      ],
+      "output": "a living, propagated biological system"
+    },
+    {
+      "id": "6",
+      "title": "Living systems engineered",
+      "depth": 1,
+      "children": [
+        {
+          "id": "6.1",
+          "title": "Microbial engineering",
+          "depth": 2,
+          "children": [
+            {
+              "id": "6.1.1",
+              "title": "Competent cell preparation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.1.2",
+              "title": "Transformation, conjugation and electroporation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.1.3",
+              "title": "Selection, outgrowth and colony isolation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.1.4",
+              "title": "Genome integration, deletion and marker curing",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.1.5",
+              "title": "Clone screening and strain verification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "synthetic-biology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            }
+          ],
+          "areas": [
+            "microbiology",
+            "synthetic-biology",
+            "genetics"
+          ],
+          "materials": [
+            "cell",
+            "nucleic-acid"
+          ]
+        },
+        {
+          "id": "6.2",
+          "title": "Cultured cell engineering",
+          "depth": 2,
+          "children": [
+            {
+              "id": "6.2.1",
+              "title": "Delivery",
+              "depth": 3,
+              "children": [
+                {
+                  "id": "6.2.1.1",
+                  "title": "Chemical and lipid transfection",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "cell-biology",
+                    "genetics",
+                    "cancer-biology",
+                    "stem-cell"
+                  ],
+                  "materials": [
+                    "cell",
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "6.2.1.2",
+                  "title": "Electroporation and nucleofection",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "cell-biology",
+                    "genetics",
+                    "cancer-biology",
+                    "stem-cell"
+                  ],
+                  "materials": [
+                    "cell",
+                    "nucleic-acid"
+                  ]
+                },
+                {
+                  "id": "6.2.1.3",
+                  "title": "Viral transduction",
+                  "depth": 4,
+                  "children": [],
+                  "areas": [
+                    "cell-biology",
+                    "genetics",
+                    "cancer-biology",
+                    "stem-cell"
+                  ],
+                  "materials": [
+                    "cell",
+                    "nucleic-acid"
+                  ]
+                }
+              ],
+              "areas": [
+                "cell-biology",
+                "genetics",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.2.2",
+              "title": "Genome editing (nuclease, base, prime, epigenome)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "genetics",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.2.3",
+              "title": "Knockdown and overexpression systems",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "genetics",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.2.4",
+              "title": "Selection and single-cell cloning",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "genetics",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.2.5",
+              "title": "Clone screening, genotyping and validation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "genetics",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "6.2.6",
+              "title": "Stable line establishment and banking",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "genetics",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid"
+              ]
+            }
+          ],
+          "areas": [
+            "cell-biology",
+            "genetics",
+            "cancer-biology",
+            "stem-cell"
+          ],
+          "materials": [
+            "cell",
+            "nucleic-acid"
+          ]
+        },
+        {
+          "id": "6.3",
+          "title": "Whole organism engineering",
+          "depth": 2,
+          "children": [
+            {
+              "id": "6.3.1",
+              "title": "Embryo manipulation and microinjection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genetics",
+                "developmental-biology",
+                "plant-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "6.3.2",
+              "title": "Transgenic and knockout line generation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genetics",
+                "developmental-biology",
+                "plant-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "6.3.3",
+              "title": "Breeding schemes, crossing and genotyping",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genetics",
+                "developmental-biology",
+                "plant-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "6.3.4",
+              "title": "Plant transformation (Agrobacterium, biolistic, protoplast)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genetics",
+                "developmental-biology",
+                "plant-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "organism"
+              ]
+            },
+            {
+              "id": "6.3.5",
+              "title": "Line establishment, backcrossing and seed stock",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genetics",
+                "developmental-biology",
+                "plant-biology",
+                "neuroscience"
+              ],
+              "materials": [
+                "organism"
+              ]
+            }
+          ],
+          "areas": [
+            "genetics",
+            "developmental-biology",
+            "plant-biology",
+            "neuroscience"
+          ],
+          "materials": [
+            "organism"
+          ]
+        },
+        {
+          "id": "6.4",
+          "title": "Therapeutic cell engineering",
+          "depth": 2,
+          "children": [
+            {
+              "id": "6.4.1",
+              "title": "Primary cell isolation and activation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "6.4.2",
+              "title": "Gene transfer and editing of primary cells",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "6.4.3",
+              "title": "Expansion and enrichment",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "6.4.4",
+              "title": "Formulation, cryopreservation and release preparation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "immunology",
+            "cancer-biology",
+            "bioengineering"
+          ],
+          "materials": [
+            "cell"
+          ]
+        },
+        {
+          "id": "6.5",
+          "title": "Synthetic biology system construction",
+          "depth": 2,
+          "children": [
+            {
+              "id": "6.5.1",
+              "title": "Pathway design, assembly and refactoring",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "synthetic-biology",
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "6.5.2",
+              "title": "Strain and chassis optimization",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "synthetic-biology",
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "6.5.3",
+              "title": "Directed evolution and selection rounds",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "synthetic-biology",
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "6.5.4",
+              "title": "Cell-free and minimal system construction",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "synthetic-biology",
+                "bioengineering",
+                "microbiology"
+              ],
+              "materials": [
+                "cell",
+                "nucleic-acid",
+                "protein"
+              ]
+            }
+          ],
+          "areas": [
+            "synthetic-biology",
+            "bioengineering",
+            "microbiology"
+          ],
+          "materials": [
+            "cell",
+            "nucleic-acid",
+            "protein"
+          ]
+        }
+      ],
+      "areas": [
+        "genetics",
+        "synthetic-biology",
+        "cell-biology",
+        "bioengineering"
+      ],
+      "materials": [
+        "cell",
+        "organism",
+        "nucleic-acid"
+      ],
+      "output": "a biological system whose genome or composition has been changed"
+    },
+    {
+      "id": "7",
+      "title": "Specimens prepared for analysis",
+      "depth": 1,
+      "children": [
+        {
+          "id": "7.1",
+          "title": "Histology and pathology preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "7.1.1",
+              "title": "Fixation, decalcification and grossing",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "developmental-biology",
+                "neuroscience",
+                "immunology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.1.2",
+              "title": "Processing, embedding and block preparation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "developmental-biology",
+                "neuroscience",
+                "immunology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.1.3",
+              "title": "Sectioning (microtome, cryostat, vibratome)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "developmental-biology",
+                "neuroscience",
+                "immunology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.1.4",
+              "title": "Routine and special staining",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "developmental-biology",
+                "neuroscience",
+                "immunology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.1.5",
+              "title": "Immunohistochemistry and multiplex immunofluorescence",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "developmental-biology",
+                "neuroscience",
+                "immunology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.1.6",
+              "title": "In situ hybridization on sections",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "developmental-biology",
+                "neuroscience",
+                "immunology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.1.7",
+              "title": "Coverslipping and slide finishing",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "developmental-biology",
+                "neuroscience",
+                "immunology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.1.8",
+              "title": "Tissue microarray construction",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "developmental-biology",
+                "neuroscience",
+                "immunology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            }
+          ],
+          "areas": [
+            "cancer-biology",
+            "developmental-biology",
+            "neuroscience",
+            "immunology"
+          ],
+          "materials": [
+            "tissue"
+          ]
+        },
+        {
+          "id": "7.2",
+          "title": "Light microscopy preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "7.2.1",
+              "title": "Fixation and permeabilization",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.2.2",
+              "title": "Immunofluorescence and dye labeling",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.2.3",
+              "title": "FISH and in situ detection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.2.4",
+              "title": "Clearing and expansion",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.2.5",
+              "title": "Mounting and slide assembly",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.2.6",
+              "title": "Live-imaging chamber and dish setup",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            }
+          ],
+          "areas": [
+            "cell-biology",
+            "neuroscience",
+            "developmental-biology"
+          ],
+          "materials": [
+            "cell",
+            "tissue"
+          ]
+        },
+        {
+          "id": "7.3",
+          "title": "Electron microscopy preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "7.3.1",
+              "title": "Chemical fixation and en bloc staining",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.3.2",
+              "title": "High-pressure freezing and freeze substitution",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.3.3",
+              "title": "Dehydration, infiltration and resin embedding",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.3.4",
+              "title": "Ultramicrotomy and grid mounting",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.3.5",
+              "title": "Negative staining and post-section staining",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.3.6",
+              "title": "Immunogold labeling",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "structural-biology",
+                "virology",
+                "neuroscience"
+              ],
+              "materials": [
+                "cell",
+                "tissue"
+              ]
+            }
+          ],
+          "areas": [
+            "cell-biology",
+            "structural-biology",
+            "virology",
+            "neuroscience"
+          ],
+          "materials": [
+            "cell",
+            "tissue"
+          ]
+        },
+        {
+          "id": "7.4",
+          "title": "Structural biology preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "7.4.1",
+              "title": "Sample homogeneity and stability screening",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "7.4.2",
+              "title": "Crystallization screening and optimization",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "7.4.3",
+              "title": "Crystal harvesting and cryoprotection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "7.4.4",
+              "title": "Cryo-EM grid preparation and vitrification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "7.4.5",
+              "title": "Grid clipping, screening and storage",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid"
+              ]
+            },
+            {
+              "id": "7.4.6",
+              "title": "NMR and solution scattering sample preparation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid"
+              ]
+            }
+          ],
+          "areas": [
+            "structural-biology",
+            "biochemistry"
+          ],
+          "materials": [
+            "protein",
+            "nucleic-acid"
+          ]
+        },
+        {
+          "id": "7.5",
+          "title": "Cytometry preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "7.5.1",
+              "title": "Single-cell suspension and debris removal",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "7.5.2",
+              "title": "Surface and intracellular antibody staining",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "7.5.3",
+              "title": "Fixation, permeabilization and viability dyes",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "7.5.4",
+              "title": "Compensation and control panels",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell"
+              ]
+            },
+            {
+              "id": "7.5.5",
+              "title": "Mass cytometry labeling and barcoding",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "stem-cell"
+              ],
+              "materials": [
+                "cell"
+              ]
+            }
+          ],
+          "areas": [
+            "immunology",
+            "cancer-biology",
+            "stem-cell"
+          ],
+          "materials": [
+            "cell"
+          ]
+        },
+        {
+          "id": "7.6",
+          "title": "Mass spectrometry and chromatography preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "7.6.1",
+              "title": "Reduction, alkylation and proteolytic digestion",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "cancer-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "metabolite",
+                "lipid"
+              ]
+            },
+            {
+              "id": "7.6.2",
+              "title": "Peptide cleanup, desalting and fractionation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "cancer-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "metabolite",
+                "lipid"
+              ]
+            },
+            {
+              "id": "7.6.3",
+              "title": "Post-translational modification enrichment",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "cancer-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "metabolite",
+                "lipid"
+              ]
+            },
+            {
+              "id": "7.6.4",
+              "title": "Isobaric and metabolic labeling",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "cancer-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "metabolite",
+                "lipid"
+              ]
+            },
+            {
+              "id": "7.6.5",
+              "title": "Metabolite and lipid extract conditioning",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "cancer-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "metabolite",
+                "lipid"
+              ]
+            },
+            {
+              "id": "7.6.6",
+              "title": "Derivatization and vial or plate loading",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "cancer-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "metabolite",
+                "lipid"
+              ]
+            }
+          ],
+          "areas": [
+            "biochemistry",
+            "cancer-biology",
+            "pharmacology"
+          ],
+          "materials": [
+            "protein",
+            "metabolite",
+            "lipid"
+          ]
+        },
+        {
+          "id": "7.7",
+          "title": "Electrophoresis and blotting preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "7.7.1",
+              "title": "Sample denaturation and loading preparation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "biochemistry",
+                "cell-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "7.7.2",
+              "title": "Gel casting and assembly",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "biochemistry",
+                "cell-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein"
+              ]
+            },
+            {
+              "id": "7.7.3",
+              "title": "Transfer, membrane blocking and probing",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "biochemistry",
+                "cell-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein"
+              ]
+            }
+          ],
+          "areas": [
+            "molecular-biology",
+            "biochemistry",
+            "cell-biology"
+          ],
+          "materials": [
+            "nucleic-acid",
+            "protein"
+          ]
+        },
+        {
+          "id": "7.8",
+          "title": "Spatial and correlative preparation",
+          "depth": 2,
+          "children": [
+            {
+              "id": "7.8.1",
+              "title": "Spatial omics slide preparation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.8.2",
+              "title": "Laser capture microdissection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            },
+            {
+              "id": "7.8.3",
+              "title": "Correlative and multimodal specimen preparation",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cancer-biology",
+                "neuroscience",
+                "developmental-biology"
+              ],
+              "materials": [
+                "tissue"
+              ]
+            }
+          ],
+          "areas": [
+            "cancer-biology",
+            "neuroscience",
+            "developmental-biology"
+          ],
+          "materials": [
+            "tissue"
+          ]
+        }
+      ],
+      "areas": [
+        "cell-biology",
+        "structural-biology",
+        "cancer-biology",
+        "neuroscience"
+      ],
+      "materials": [
+        "tissue",
+        "cell",
+        "protein"
+      ],
+      "output": "a specimen in the exact physical form an instrument requires"
+    },
+    {
+      "id": "8",
+      "title": "Measurements and characterization",
+      "depth": 1,
+      "children": [
+        {
+          "id": "8.1",
+          "title": "Quantity, quality and integrity assays",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.1.1",
+              "title": "Nucleic acid concentration and integrity",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein",
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.1.2",
+              "title": "Protein concentration and purity",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein",
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.1.3",
+              "title": "Cell counting, viability and confluency",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein",
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.1.4",
+              "title": "Contamination testing (endotoxin, mycoplasma, sterility, bioburden)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "all"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "protein",
+                "cell",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "all"
+          ],
+          "materials": [
+            "nucleic-acid",
+            "protein",
+            "cell",
+            "data"
+          ]
+        },
+        {
+          "id": "8.2",
+          "title": "Amplification-based detection and quantification",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.2.1",
+              "title": "qPCR and RT-qPCR",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "microbiology",
+                "virology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.2.2",
+              "title": "Digital PCR",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "microbiology",
+                "virology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.2.3",
+              "title": "Isothermal and point-of-care amplification",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "microbiology",
+                "virology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.2.4",
+              "title": "Melt curve and genotyping assays",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "molecular-biology",
+                "microbiology",
+                "virology",
+                "genetics"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "molecular-biology",
+            "microbiology",
+            "virology",
+            "genetics"
+          ],
+          "materials": [
+            "nucleic-acid",
+            "data"
+          ]
+        },
+        {
+          "id": "8.3",
+          "title": "Sequencing readout",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.3.1",
+              "title": "Short-read sequencing runs",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "genetics",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.3.2",
+              "title": "Long-read and native-molecule sequencing",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "genetics",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.3.3",
+              "title": "Sanger sequencing and fragment analysis",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "genetics",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.3.4",
+              "title": "Run QC and base-level quality assessment",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "genomics",
+                "genetics",
+                "ecology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "nucleic-acid",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "genomics",
+            "genetics",
+            "ecology",
+            "cancer-biology"
+          ],
+          "materials": [
+            "nucleic-acid",
+            "data"
+          ]
+        },
+        {
+          "id": "8.4",
+          "title": "Separation-based analysis",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.4.1",
+              "title": "Agarose and polyacrylamide gel analysis",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "cell-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "metabolite",
+                "data"
+              ]
+            },
+            {
+              "id": "8.4.2",
+              "title": "Western blot detection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "cell-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "metabolite",
+                "data"
+              ]
+            },
+            {
+              "id": "8.4.3",
+              "title": "Capillary and microfluidic electrophoresis",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "cell-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "metabolite",
+                "data"
+              ]
+            },
+            {
+              "id": "8.4.4",
+              "title": "Liquid and gas chromatography",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "cell-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "metabolite",
+                "data"
+              ]
+            },
+            {
+              "id": "8.4.5",
+              "title": "Mass spectrometry acquisition",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "biochemistry",
+                "molecular-biology",
+                "cell-biology",
+                "pharmacology"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "metabolite",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "biochemistry",
+            "molecular-biology",
+            "cell-biology",
+            "pharmacology"
+          ],
+          "materials": [
+            "protein",
+            "nucleic-acid",
+            "metabolite",
+            "data"
+          ]
+        },
+        {
+          "id": "8.5",
+          "title": "Binding, immunoassay and interaction analysis",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.5.1",
+              "title": "ELISA and sandwich immunoassays",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "biochemistry",
+                "pharmacology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "data"
+              ]
+            },
+            {
+              "id": "8.5.2",
+              "title": "Multiplex bead and array immunoassays",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "biochemistry",
+                "pharmacology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "data"
+              ]
+            },
+            {
+              "id": "8.5.3",
+              "title": "Lateral flow and rapid tests",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "biochemistry",
+                "pharmacology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "data"
+              ]
+            },
+            {
+              "id": "8.5.4",
+              "title": "Label-free binding kinetics (SPR, BLI)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "biochemistry",
+                "pharmacology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "data"
+              ]
+            },
+            {
+              "id": "8.5.5",
+              "title": "Thermodynamic and stability assays (ITC, thermal shift)",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "biochemistry",
+                "pharmacology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "protein",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "immunology",
+            "biochemistry",
+            "pharmacology",
+            "cancer-biology"
+          ],
+          "materials": [
+            "protein",
+            "data"
+          ]
+        },
+        {
+          "id": "8.6",
+          "title": "Cell-based and functional assays",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.6.1",
+              "title": "Viability, proliferation and cytotoxicity",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "pharmacology",
+                "cancer-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.6.2",
+              "title": "Reporter and signaling pathway assays",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "pharmacology",
+                "cancer-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.6.3",
+              "title": "Enzyme activity and kinetics",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "pharmacology",
+                "cancer-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.6.4",
+              "title": "Migration, invasion and adhesion",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "pharmacology",
+                "cancer-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.6.5",
+              "title": "Differentiation, potency and colony-forming assays",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "pharmacology",
+                "cancer-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.6.6",
+              "title": "Dose response and drug combination studies",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "pharmacology",
+                "cancer-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.6.7",
+              "title": "Pooled and arrayed screening campaigns",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "pharmacology",
+                "cancer-biology",
+                "stem-cell",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "cell-biology",
+            "pharmacology",
+            "cancer-biology",
+            "stem-cell",
+            "bioengineering"
+          ],
+          "materials": [
+            "cell",
+            "data"
+          ]
+        },
+        {
+          "id": "8.7",
+          "title": "Cytometry acquisition",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.7.1",
+              "title": "Conventional and spectral flow acquisition",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "stem-cell",
+                "cell-biology"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.7.2",
+              "title": "Cell sorting and single-cell deposition",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "stem-cell",
+                "cell-biology"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            },
+            {
+              "id": "8.7.3",
+              "title": "Mass cytometry acquisition",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "immunology",
+                "cancer-biology",
+                "stem-cell",
+                "cell-biology"
+              ],
+              "materials": [
+                "cell",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "immunology",
+            "cancer-biology",
+            "stem-cell",
+            "cell-biology"
+          ],
+          "materials": [
+            "cell",
+            "data"
+          ]
+        },
+        {
+          "id": "8.8",
+          "title": "Imaging acquisition",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.8.1",
+              "title": "Widefield, confocal and super-resolution microscopy",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            },
+            {
+              "id": "8.8.2",
+              "title": "Live-cell and time-lapse imaging",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            },
+            {
+              "id": "8.8.3",
+              "title": "High-content and automated imaging",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            },
+            {
+              "id": "8.8.4",
+              "title": "Electron microscopy and tomography acquisition",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            },
+            {
+              "id": "8.8.5",
+              "title": "Whole-slide scanning and digital pathology capture",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            },
+            {
+              "id": "8.8.6",
+              "title": "In vivo and preclinical imaging",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "cell-biology",
+                "neuroscience",
+                "developmental-biology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "cell-biology",
+            "neuroscience",
+            "developmental-biology",
+            "cancer-biology"
+          ],
+          "materials": [
+            "cell",
+            "tissue",
+            "data"
+          ]
+        },
+        {
+          "id": "8.9",
+          "title": "Structural and biophysical characterization",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.9.1",
+              "title": "X-ray diffraction data collection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.9.2",
+              "title": "Cryo-EM data collection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.9.3",
+              "title": "NMR spectroscopy",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.9.4",
+              "title": "Circular dichroism and optical spectroscopy",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "data"
+              ]
+            },
+            {
+              "id": "8.9.5",
+              "title": "Light scattering, analytical ultracentrifugation, calorimetry",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "structural-biology",
+                "biochemistry"
+              ],
+              "materials": [
+                "protein",
+                "nucleic-acid",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "structural-biology",
+            "biochemistry"
+          ],
+          "materials": [
+            "protein",
+            "nucleic-acid",
+            "data"
+          ]
+        },
+        {
+          "id": "8.10",
+          "title": "Electrophysiology and biosensing",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.10.1",
+              "title": "Manual and automated patch clamp",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "pharmacology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            },
+            {
+              "id": "8.10.2",
+              "title": "Multi-electrode array and impedance",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "pharmacology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            },
+            {
+              "id": "8.10.3",
+              "title": "Electrochemical and optical biosensors",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "neuroscience",
+                "pharmacology",
+                "bioengineering"
+              ],
+              "materials": [
+                "cell",
+                "tissue",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "neuroscience",
+            "pharmacology",
+            "bioengineering"
+          ],
+          "materials": [
+            "cell",
+            "tissue",
+            "data"
+          ]
+        },
+        {
+          "id": "8.11",
+          "title": "Microbial and organism phenotyping",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.11.1",
+              "title": "Enumeration and viability plating",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "ecology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "organism",
+                "data"
+              ]
+            },
+            {
+              "id": "8.11.2",
+              "title": "Growth kinetics and fitness assays",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "ecology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "organism",
+                "data"
+              ]
+            },
+            {
+              "id": "8.11.3",
+              "title": "Antimicrobial susceptibility testing",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "ecology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "organism",
+                "data"
+              ]
+            },
+            {
+              "id": "8.11.4",
+              "title": "Identification and biochemical panels",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "ecology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "organism",
+                "data"
+              ]
+            },
+            {
+              "id": "8.11.5",
+              "title": "Morphometric and behavioral phenotyping",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "microbiology",
+                "ecology",
+                "genetics"
+              ],
+              "materials": [
+                "cell",
+                "organism",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "microbiology",
+            "ecology",
+            "genetics"
+          ],
+          "materials": [
+            "cell",
+            "organism",
+            "data"
+          ]
+        },
+        {
+          "id": "8.12",
+          "title": "In vivo study execution and readout",
+          "depth": 2,
+          "children": [
+            {
+              "id": "8.12.1",
+              "title": "Dosing and administration",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "neuroscience",
+                "immunology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "organism",
+                "data"
+              ]
+            },
+            {
+              "id": "8.12.2",
+              "title": "In-life sampling and pharmacokinetics",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "neuroscience",
+                "immunology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "organism",
+                "data"
+              ]
+            },
+            {
+              "id": "8.12.3",
+              "title": "Physiological and behavioral monitoring",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "neuroscience",
+                "immunology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "organism",
+                "data"
+              ]
+            },
+            {
+              "id": "8.12.4",
+              "title": "Model induction and challenge studies",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "neuroscience",
+                "immunology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "organism",
+                "data"
+              ]
+            },
+            {
+              "id": "8.12.5",
+              "title": "Terminal procedures and tissue collection",
+              "depth": 3,
+              "children": [],
+              "areas": [
+                "pharmacology",
+                "neuroscience",
+                "immunology",
+                "cancer-biology"
+              ],
+              "materials": [
+                "organism",
+                "data"
+              ]
+            }
+          ],
+          "areas": [
+            "pharmacology",
+            "neuroscience",
+            "immunology",
+            "cancer-biology"
+          ],
+          "materials": [
+            "organism",
+            "data"
+          ]
+        }
+      ],
+      "areas": [
+        "all"
+      ],
+      "materials": [
+        "data"
+      ],
+      "output": "data about a sample, system or organism"
+    }
+  ]
+}
