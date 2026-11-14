@@ -27,7 +27,7 @@ body {
 
 a { color: var(--accent); }
 
-.wrap { margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 /* Header */
 .hero { padding: 48px 0 28px; }
@@ -84,7 +84,7 @@ main { padding-bottom: 48px; }
   overflow-x: auto; padding-bottom: 12px;
 }
 .col {
-  flex: 0 0 258px; min-width: 258px;
+  flex: 1 1 0; min-width: 258px;
   display: flex; flex-direction: column; gap: 8px;
 }
 
