@@ -213,11 +213,6 @@ function render() {
   }
 
   el("empty").hidden = domains.length > 0;
-
-  const shown = domains.reduce((sum, d) => sum + countLeaves(d), 0);
-  el("resultLine").textContent = filtering
-    ? `${shown} of ${DATA.stats.leaves} workflows across ${domains.length} of ${DATA.stats.domains} domains`
-    : `${DATA.stats.domains} domains, ${DATA.stats.leaves} workflows, ${DATA.stats.maxDepth} levels deep`;
 }
 
 function setView(view) {
@@ -245,12 +240,6 @@ function setAllOpen(open) {
       row.setAttribute("aria-expanded", "false");
     });
   }
-}
-
-function fillStats() {
-  const s = DATA.stats;
-  el("stats").textContent =
-    `${s.domains} domains, ${s.leaves} workflows, ${s.nodes} nodes, ${s.maxDepth} levels deep`;
 }
 
 function fillSelects() {
@@ -309,7 +298,6 @@ fetch("taxonomy.json")
   })
   .then((data) => {
     DATA = data;
-    fillStats();
     fillSelects();
     setView("map");
   })

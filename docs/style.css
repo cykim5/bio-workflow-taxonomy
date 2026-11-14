@@ -39,8 +39,6 @@ h1 {
 .lede { color: var(--muted); font-size: 16px; max-width: 64ch; margin: 0; }
 .lede strong { color: var(--text); font-weight: 600; }
 
-.stats { color: var(--muted); font-size: 13px; margin: 20px 0 0; }
-
 /* Controls */
 .controls {
   position: sticky; top: 0; z-index: 10;
@@ -80,7 +78,6 @@ input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1
 
 /* Map view */
 main { padding-bottom: 48px; }
-.map-hint { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
 
 .columns {
   display: flex; gap: 14px; align-items: start;
@@ -92,7 +89,7 @@ main { padding-bottom: 48px; }
 }
 
 .col-head {
-  font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+  font-size: 13px; font-weight: 600;
   color: var(--muted); padding: 0 2px 2px;
 }
 
@@ -134,8 +131,6 @@ main { padding-bottom: 48px; }
 .tag + .tag::before { content: ", "; }
 
 /* Tree (list view) */
-.result-line { color: var(--muted); font-size: 13px; margin: 18px 0 10px; min-height: 1.4em; }
-
 .domain {
   border-top: 1px solid var(--line);
   padding-bottom: 12px;
