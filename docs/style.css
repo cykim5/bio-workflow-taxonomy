@@ -2,13 +2,13 @@
    accent, hairline borders, no shadows, no gradients, no decoration. */
 
 :root {
-  --bg: #faf8f5;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --text: #1c1b19;
-  --muted: #6b675f;
-  --line: #e7e2da;
-  --accent: #2f5d50;
-  --accent-soft: #e4eee9;
+  --text: #1a1d1c;
+  --muted: #5f6b68;
+  --line: #e2e8e7;
+  --accent: #0f766e;
+  --accent-soft: #e2f2ef;
   --hit: #f3e4b8;
   --sans: "Inter", system-ui, -apple-system, sans-serif;
 }
