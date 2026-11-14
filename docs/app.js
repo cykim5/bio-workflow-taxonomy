@@ -4,6 +4,7 @@ const el = (id) => document.getElementById(id);
 const treeBox = el("tree");
 
 let DATA = null;
+let REFERENCES = {};
 const state = { query: "", area: "", material: "", view: "map", path: [] };
 
 // ---------- helpers ----------
@@ -147,6 +148,40 @@ function renderMap(domains) {
     siblings = open.children;
     level += 1;
   }
+
+  // References: if the deepest open node is a leaf with papers, show them
+  // in a fourth column. Workflows without papers get no column.
+  let leaf = null;
+  let levelNodes = domains;
+  for (const id of state.path) {
+    leaf = (levelNodes || []).find((n) => n.id === id) || null;
+    if (!leaf) break;
+    levelNodes = leaf.children;
+  }
+  const refs = leaf && (!leaf.children || !leaf.children.length) && REFERENCES[leaf.id];
+  if (refs && refs.length) {
+    const col = document.createElement("div");
+    col.className = "col";
+
+    const head = document.createElement("p");
+    head.className = "col-head";
+    head.textContent = "References";
+    col.appendChild(head);
+
+    refs.forEach((p) => {
+      const href = p.doi ? "https://doi.org/" + p.doi : p.source;
+      const typeLabel = p.type ? p.type.charAt(0).toUpperCase() + p.type.slice(1) : "";
+      const card = document.createElement("div");
+      card.className = "ref-card";
+      card.innerHTML =
+        `<a class="ref-title" href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(p.title)}</a>` +
+        `<span class="ref-meta">${escapeHtml(p.authors)}, ${p.year}, ${escapeHtml(p.venue)}</span>` +
+        (typeLabel ? `<span class="ref-type">${escapeHtml(typeLabel)}</span>` : "");
+      col.appendChild(card);
+    });
+
+    columns.appendChild(col);
+  }
 }
 
 // ---------- render ----------
@@ -274,3 +309,12 @@ fetch("taxonomy.json")
       '<p class="empty">Could not load taxonomy.json. If you opened this file directly, ' +
       "serve the folder over http instead, for example with python3 -m http.server.</p>";
   });
+
+// References are optional: the map works without them.
+fetch("references.json")
+  .then((r) => (r.ok ? r.json() : {}))
+  .then((data) => {
+    REFERENCES = data || {};
+    if (DATA) render();
+  })
+  .catch(() => {});

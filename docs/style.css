@@ -117,6 +117,23 @@ main { padding-bottom: 48px; }
 }
 .box.is-open .b-arrow { color: var(--accent); }
 
+/* References column (map view) */
+.ref-card {
+  background: var(--surface); border: 1px solid var(--line);
+  padding: 11px 13px;
+}
+.ref-title {
+  display: block; font-size: 13px; font-weight: 600; line-height: 1.4;
+  color: var(--accent); text-decoration: none;
+}
+.ref-title:hover { text-decoration: underline; }
+.ref-meta { display: block; font-size: 12px; color: var(--muted); margin-top: 4px; }
+.ref-type {
+  display: inline-block; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--muted);
+  border: 1px solid var(--line); padding: 1px 6px; margin-top: 7px;
+}
+
 /* Tree (list view) */
 .domain {
   border-top: 1px solid var(--line);
