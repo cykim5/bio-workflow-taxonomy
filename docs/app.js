@@ -119,7 +119,6 @@ function leafCard(node) {
     .join("");
   card.innerHTML =
     `<strong>${escapeHtml(node.id)} ${escapeHtml(node.title)}</strong>` +
-    `This is a single workflow, the smallest unit in the map.` +
     (areas ? `<div class="tags">${areas}</div>` : "");
   return card;
 }
