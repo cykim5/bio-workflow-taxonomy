@@ -125,11 +125,12 @@ function renderMap(domains) {
     head.textContent = COLUMN_HEADS[Math.min(level, COLUMN_HEADS.length - 1)];
     col.appendChild(head);
 
+    const thisLevel = level;
     siblings.forEach((node) => {
       const box = makeBox(node, level + 1, open !== null && node.id === open.id);
       box.addEventListener("click", () => {
-        const already = state.path[level] === node.id;
-        state.path = state.path.slice(0, level);
+        const already = state.path[thisLevel] === node.id;
+        state.path = state.path.slice(0, thisLevel);
         if (!already) state.path.push(node.id);
         renderMap(domains);
         const cols = el("columns");
