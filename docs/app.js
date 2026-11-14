@@ -110,19 +110,6 @@ function makeBox(node, level, isOpen) {
   return box;
 }
 
-function leafCard(node) {
-  const card = document.createElement("div");
-  card.className = "leaf-card";
-  const areas = (node.areas || [])
-    .filter((a) => a !== "all")
-    .map((a) => `<span class="tag">${escapeHtml(DATA.areaLabels[a] || a)}</span>`)
-    .join("");
-  card.innerHTML =
-    `<strong>${escapeHtml(node.id)} ${escapeHtml(node.title)}</strong>` +
-    (areas ? `<div class="tags">${areas}</div>` : "");
-  return card;
-}
-
 function renderMap(domains) {
   const columns = el("columns");
   columns.innerHTML = "";
@@ -167,24 +154,7 @@ function renderMap(domains) {
       col.dataset.d = domainId;
       columns.querySelectorAll(".col")[0].dataset.d = domainId;
     }
-    if (!open.children.length) {
-      const last = document.createElement("div");
-      last.className = "col";
-      last.dataset.d = domainId;
-      const card = leafCard(open);
-      last.appendChild(card);
-      columns.appendChild(last);
-      // Align the detail card with the selected box's row.
-      requestAnimationFrame(() => {
-        const selected = columns.querySelectorAll(".box.is-open");
-        const box = selected[selected.length - 1];
-        if (box) {
-          const top = box.getBoundingClientRect().top - columns.getBoundingClientRect().top;
-          if (top > 0) card.style.marginTop = top + "px";
-        }
-      });
-      break;
-    }
+    if (!open.children.length) break;
     siblings = open.children;
     level += 1;
   }
