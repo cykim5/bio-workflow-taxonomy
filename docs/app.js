@@ -59,18 +59,10 @@ function renderNode(node, openDepth) {
 
   const leafCount = hasKids ? countLeaves(node) : 0;
   row.innerHTML =
-    `<span class="caret${hasKids ? "" : " leaf"}"></span>` +
     `<span class="num">${escapeHtml(node.id)}</span>` +
     `<span class="label">${highlight(node.title, state.query)}</span>` +
     (hasKids ? `<span class="count">${leafCount}</span>` : "");
   wrapper.appendChild(row);
-
-  if (node.depth === 1 && node.output) {
-    const out = document.createElement("p");
-    out.className = "output";
-    out.textContent = "output: " + node.output;
-    wrapper.appendChild(out);
-  }
 
   if (hasKids) {
     const kids = document.createElement("div");
