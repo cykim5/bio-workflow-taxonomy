@@ -43,8 +43,6 @@ h1 {
 .controls {
   position: sticky; top: 0; z-index: 10;
   background: var(--bg);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
   padding: 12px 0;
 }
 .controls-inner { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
