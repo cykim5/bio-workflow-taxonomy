@@ -172,8 +172,18 @@ function renderMap(domains) {
       const last = document.createElement("div");
       last.className = "col";
       last.dataset.d = domainId;
-      last.appendChild(leafCard(open));
+      const card = leafCard(open);
+      last.appendChild(card);
       columns.appendChild(last);
+      // Align the detail card with the selected box's row.
+      requestAnimationFrame(() => {
+        const selected = columns.querySelectorAll(".box.is-open");
+        const box = selected[selected.length - 1];
+        if (box) {
+          const top = box.getBoundingClientRect().top - columns.getBoundingClientRect().top;
+          if (top > 0) card.style.marginTop = top + "px";
+        }
+      });
       break;
     }
     siblings = open.children;
