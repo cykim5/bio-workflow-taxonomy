@@ -249,15 +249,8 @@ function setAllOpen(open) {
 
 function fillStats() {
   const s = DATA.stats;
-  const rows = [
-    ["Domains", s.domains],
-    ["Workflows", s.leaves],
-    ["Nodes", s.nodes],
-    ["Levels", s.maxDepth],
-  ];
-  el("stats").innerHTML = rows
-    .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
-    .join("");
+  el("stats").textContent =
+    `${s.domains} domains, ${s.leaves} workflows, ${s.nodes} nodes, ${s.maxDepth} levels deep`;
 }
 
 function fillSelects() {
