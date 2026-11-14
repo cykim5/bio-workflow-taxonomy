@@ -91,13 +91,9 @@ function makeBox(node, level, isOpen) {
   box.className = `box lvl${level}` + (hasKids ? "" : " is-leaf") + (isOpen ? " is-open" : "");
   box.setAttribute("aria-expanded", String(isOpen));
 
-  const meta = hasKids
-    ? `${countLeaves(node)} workflow${countLeaves(node) === 1 ? "" : "s"}`
-    : "";
   box.innerHTML =
     `<span class="b-num">${escapeHtml(node.id)}</span>` +
     `<span class="b-title">${highlight(node.title, state.query)}</span>` +
-    (meta ? `<span class="b-meta">${meta}</span>` : "") +
     (hasKids ? `<span class="b-arrow">›</span>` : "");
   return box;
 }

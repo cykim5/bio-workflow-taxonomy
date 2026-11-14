@@ -111,7 +111,6 @@ main { padding-bottom: 48px; }
 .box.lvl1 .b-num { color: var(--accent); font-weight: 600; font-size: 12px; }
 .box .b-title { display: block; font-size: 14px; line-height: 1.35; }
 .box.lvl1 .b-title { font-size: 16px; font-weight: 600; }
-.box .b-meta { display: block; font-size: 11px; color: var(--muted); margin-top: 5px; }
 .box .b-arrow {
   position: absolute; right: 11px; top: 50%; transform: translateY(-50%);
   color: var(--muted); font-size: 12px;
